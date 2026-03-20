@@ -17,8 +17,8 @@ Q4:  How long does it take for you to finalise your courses for the semester?
 
 Q5:  Do you currently use any tools or resources to help choose courses? (e.g., websites, spreadsheets, advice from others) 
 
-Q6: If you could improve the course selection process at UQ, what would you change?
+Q6: If you could improve the course selection process at UQ, what would you change/what new features would you add?
  
 Q7: What were the parts of choosing courses that made the process harder for you?
- 
-Q8: If there was a supplemental app or website to help you find course information, what kind of information would you like on there?
+
+Q8: If there was a supplemental app or website to help choose courses, how likely would you be to use it?
