@@ -10,16 +10,6 @@
 - Personalized course recommendations based on students' study plans, preferences, and past student reviews.
 
 ## Channels
-<<<<<<< HEAD
-- put some advertisement on third-party platform
-- cooperate with some retail stores
-## Customer Relationships
-- Community operation
-- VIP system
-## Revenue Streams
-- authorize to some universities
-- earn advertisement fees
-=======
 - A dedicated third-party website accessible to UQ students
 - Word-of-mouth referrals among students
 - Student communities (Reddit, Discord, university forums) and partering up with university clubs and societies.
@@ -28,6 +18,7 @@
 - Providing support and guidance through the course selection process, possibly through an AI agent or a FAQ section on the website.
 - Offering filtering and personalization features that allow students to tailor course recommendations based on their individual needs and preferences.
 - Displaying reviews and ratings from past students to help current students make informed decisions.
+- VIP personalized customization
 
 ## Revenue Streams
 - Freemium subscription model (premium features for advanced tools)
@@ -35,4 +26,3 @@
 - Sponsored course listings (clearly labelled)
 - Targeted advertising (student-relevant services)
 
->>>>>>> 7cd5443ecfbb3d96ad75887cb9ea25139cffe027
