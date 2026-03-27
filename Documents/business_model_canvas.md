@@ -11,6 +11,8 @@
 
 ## Channels
 - A dedicated third-party website accessible to UQ students
+- Word-of-mouth referrals among students
+- Student communities (Reddit, Discord, university forums) and partering up with university clubs and societies.
 
 ## Customer Relationships
 - Providing support and guidance through the course selection process, possibly through an AI agent or a FAQ section on the website.
@@ -18,4 +20,8 @@
 - Displaying reviews and ratings from past students to help current students make informed decisions.
 
 ## Revenue Streams
-- 
+- Freemium subscription model (premium features for advanced tools)
+- University partnerships for platform integration and analytics
+- Sponsored course listings (clearly labelled)
+- Targeted advertising (student-relevant services)
+
