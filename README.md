@@ -11,6 +11,7 @@ Jinhan Li -49088847 -Rony-star666 -jinhan.li1@student.uq.edu.au
 Ranvir Arora - 50276707 - s5027670 - ranvir.arora@student.uq.edu.au
 
 **REPOSITORY STRUCTURE**
+```bash
 └── 21_Grace
     ├── Code
     │   └── test.md
@@ -48,3 +49,4 @@ Ranvir Arora - 50276707 - s5027670 - ranvir.arora@student.uq.edu.au
     ├── Prototypes
     │   └── test.md
     └── README.md
+    ```
