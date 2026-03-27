@@ -10,7 +10,8 @@
 - put some advertisement on third-party platform
 - cooperate with some retail stores
 ## Customer Relationships
-- 
+- Community operation
+- VIP system
 ## Revenue Streams
 - authorize to some universities
 - earn advertisement fees
