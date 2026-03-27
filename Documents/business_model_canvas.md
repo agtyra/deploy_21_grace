@@ -6,7 +6,7 @@
 
 ## Value Propositions
 - A streamlined and user-friendly course selection process that reduces confusion and time consumption for UQ students.
-- A centralized platform that consolidates all necessary information and resources for course selection, making it easier for students to access and use.
+- A centralized platform that consolidates all necessary information and resources for course selection, making it easier for students to access and use. [This was identified as a problem students faced in interviews.](./learning_card.md#hypothesis-2-students-use-a-variety-of-sources-from-a-vareity-of-places-to-help-course-selection)
 - Personalized course recommendations based on students' study plans, preferences, and past student reviews.
 
 ## Channels
