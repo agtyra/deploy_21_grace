@@ -9,3 +9,42 @@ Laura Smyth - 49986176 - laurasmythuq - l.c.smyth@student.uq.edu.au
 Jinhan Li -49088847 -Rony-star666 -jinhan.li1@student.uq.edu.au
 
 Ranvir Arora - 50276707 - s5027670 - ranvir.arora@student.uq.edu.au
+
+**REPOSITORY STRUCTURE**
+└── 21_Grace
+    ├── Code
+    │   └── test.md
+    ├── Documents
+    │   ├── business_model_canvas.md
+    │   ├── learning_card.md
+    │   ├── team_values.md
+    │   └── test_card.md
+    ├── Interviews
+    │   └── Iteration_1
+    │       ├── Jinhan
+    │       │   ├── Jinhan_20260318.md
+    │       │   ├── Jinhan_20260319.md
+    │       │   ├── Jinhan_20260321.md
+    │       │   ├── Jinhan_20260325.md
+    │       │   └── Jinhan_20260326.md
+    │       ├── Kayla
+    │       │   ├── Kayla_20260319_1.md
+    │       │   ├── Kayla_20260319_2.md
+    │       │   ├── Kayla_20260325_1.md
+    │       │   ├── Kayla_20260326_1.md
+    │       │   └── Kayla_20260326_2.md
+    │       ├── Kezia
+    │       │   ├── Kezia_20260319_1.md
+    │       │   └── Kezia_20260319_2.md
+    │       ├── Laura
+    │       │   └── test.md
+    │       └── Ranvir
+    │           ├── Interview#1.md
+    │           ├── Interview#2.md
+    │           ├── Interview#3.md
+    │           └── Inverview#4.md
+    ├── Meetings
+    │   └── test.md
+    ├── Prototypes
+    │   └── test.md
+    └── README.md
