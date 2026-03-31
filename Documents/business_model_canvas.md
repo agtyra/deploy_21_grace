@@ -1,8 +1,10 @@
 # Business Model Canvas
 
 ## Customer Segments
-- UQ students who are in the process of choosing courses for their semester.
-- UQ students who find the current course selection process confusing or time-consuming.
+- **First-year and early-degree UQ** students who are learning how to build a study plan and choose courses for the first time.
+- **Students in dual degrees, extended majors, or other non-standard programs** who need to satisfy multiple course and prerequisite requirements.
+- **Students in elective-heavy degrees** who need to compare many course options and understand workload, difficulty, and relevance before deciding.
+- **Exchange or visiting students** who must match UQ subjects against their home university requirements and credit rules.
 
 ## Value Propositions
 - A streamlined and user-friendly course selection process that reduces confusion and time consumption for UQ students.
@@ -26,3 +28,24 @@
 - Sponsored course listings (clearly labelled)
 - Targeted advertising (student-relevant services)
 
+
+# Value Proposition Canvas
+
+## Customer Profile
+
+### Customer Jobs
+
+
+### Pains
+
+
+### Gains
+
+
+## Value Map
+
+### Products / Services
+
+### Pain Relievers
+
+### Gain Creators
