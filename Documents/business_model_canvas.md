@@ -32,21 +32,74 @@
 
 # Value Proposition Canvas
 
-## Customer Profile
+## 1. First-year and early-degree UQ students
 
-### Customer Jobs
+### Customer Profile
+
+#### Customer Jobs
+- Understand degree requirements and available course options.
+- Choose courses for the semester without missing prerequisites or core subjects.
+- Compare electives and decide which courses fit their interests and goals.
+
+#### Pains
+- They often do not know where to start or what information matters most.
+- Course information is spread across multiple pages and can be hard to find.
+- They worry about choosing the wrong courses and delaying their degree.
+
+#### Gains
+- A simple, guided way to plan courses step by step.
+- Clear summaries of requirements, electives, and course options.
+- Confidence that their choices fit their degree path.
+
+### Value Map
+
+#### Products / Services
+- A guided course-planning tool with degree and semester breakdowns.
+- Easy-to-read course summaries with prerequisites, assessments, and workload.
+- A course comparison feature for electives.
+
+#### Pain Relievers
+- Reduces the need to search across many different pages.
+- Shows key course information in one place.
+- Helps students avoid course choices that do not fit their degree plan.
+
+#### Gain Creators
+- Makes course selection feel more manageable and less overwhelming.
+- Helps students make faster and more confident decisions.
+- Supports better first-semester and first-year planning.
 
 
-### Pains
+## 2. Students in dual degrees, extended majors, or other non-standard programs
 
+### Customer Profile
 
-### Gains
+#### Customer Jobs
+- Check which courses satisfy multiple degree or major requirements.
+- Track prerequisites, core subjects, and progression rules across programs.
+- Make sure course choices still allow them to graduate on time.
 
+#### Pains
+- Requirements are more complex and harder to compare across programs.
+- It is easy to use the wrong study plan or course list after program changes.
+- They need to cross-check many pages and advisors to confirm what counts.
 
-## Value Map
+#### Gains
+- A clear way to see how each course fits into more than one requirement.
+- Better visibility of prerequisites, progression, and remaining degree needs.
+- Less confusion when planning around changing program structures.
 
-### Products / Services
+### Value Map
+#### Products / Services
+- A requirement-matching tool that shows how courses count across programs.
+- A prerequisite and progression checker.
+- A planning view that helps students map out future semesters.
 
-### Pain Relievers
+#### Pain Relievers
+- Reduces errors from using the wrong course list or study plan.
+- Makes it easier to confirm whether a course satisfies multiple requirements.
+- Lowers the need to rely on advisors for every planning decision.
 
-### Gain Creators
+#### Gain Creators
+- Gives students clearer control over complex degree planning.
+- Helps them stay on track for graduation.
+- Makes non-standard program planning less stressful and more transparent.
