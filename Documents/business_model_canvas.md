@@ -103,3 +103,45 @@
 - Gives students clearer control over complex degree planning.
 - Helps them stay on track for graduation.
 - Makes non-standard program planning less stressful and more transparent.
+
+
+## 3. Students in elective-heavy degrees
+
+### Customer Profile
+
+#### Customer Jobs
+- Browse courses by subject area and faculty, then compare elective options without needing course-code knowledge.
+- Balance workload and difficulty across the semester.
+- Select subjects that build useful skills for career goals or further study.
+
+#### Pains
+- Too many options make decision-making slow and overwhelming.
+- Official course descriptions often lack clear details on practical workload, teaching style, tutor quality, and assessment format.
+- Assessment structures can change between semesters, but these updates are hard to see early.
+- It is hard to discover courses by subject when browsing depends on known course codes.
+
+#### Gains
+- Subject and faculty-based discovery, with filters for workload, difficulty, and topic relevance.
+- Student-informed insights about assessments, teaching quality, tutor experience, and outcomes.
+- Visibility of recent assessment changes before enrollment decisions.
+- More confidence that selected electives are both manageable and valuable.
+
+### Value Map
+
+#### Products / Services
+- A subject and faculty-based discovery tool plus an elective comparison dashboard with filters for workload, difficulty, assessment style, and topic area.
+- Student review and rating summaries with insights on teaching quality, tutor experience, and assessment expectations.
+- An assessment update tracker highlighting recent semester-level changes.
+- Personalized elective recommendations based on interests, goals, and completed courses.
+
+#### Pain Relievers
+- Reduces choice overload by narrowing electives to suitable options.
+- Makes hidden factors such as workload intensity and assessment pressure easier to see.
+- Enables course discovery without requiring prior course-code knowledge.
+- Surfaces assessment changes early so students avoid outdated assumptions.
+- Saves time by presenting comparable elective data in one place.
+
+#### Gain Creators
+- Helps students choose electives that are both engaging and strategically useful.
+- Improves semester planning by balancing high- and low-intensity courses.
+- Increases satisfaction with course choices and perceived academic progress.
