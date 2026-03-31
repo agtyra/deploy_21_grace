@@ -145,3 +145,46 @@
 - Helps students choose electives that are both engaging and strategically useful.
 - Improves semester planning by balancing high- and low-intensity courses.
 - Increases satisfaction with course choices and perceived academic progress.
+
+
+## 4. Exchange or visiting students
+
+### Customer Profile
+
+#### Customer Jobs
+- Match UQ courses to home university requirements by comparing learning outcomes, prerequisites, and credit rules.
+- Confirm prerequisite eligibility and avoid invalid subject selections.
+- Build a study plan that satisfies both UQ enrollment needs and home institution approval, with semester timetable visibility.
+
+#### Pains
+- Credit transfer, equivalency rules, and learning outcomes are spread across multiple systems and can be unclear.
+- Students fear taking courses that are later rejected by their home university.
+- It is difficult to manually cross-check learning outcomes between UQ courses and home university requirements.
+- It is hard to visualize selected courses against semester timetables without switching between tools.
+- System delays during course changes can increase anxiety about academic and financial risk.
+
+#### Gains
+- Learning-outcomes comparison and equivalency guidance that flags likely transfer risks before enrollment.
+- A shortlist of exchange-suitable courses aligned with home university constraints and prerequisite eligibility.
+- Real-time timetable visibility for selected courses in one planning flow.
+- Greater confidence in submitting study plans for approval with fewer revisions.
+
+### Value Map
+
+#### Products / Services
+- A learning-outcomes comparison tool and credit-equivalency checker linking UQ courses to home university criteria.
+- Exchange-focused course filters for availability, prerequisites, prerequisite chains, and faculty restrictions.
+- An integrated timetable planning view that maps selected courses across semesters.
+- A study plan export or approval-ready summary with learning-outcomes rationale that students can share with advisors.
+
+#### Pain Relievers
+- Clarifies transfer risk by showing compatibility and potential credit issues early.
+- Reduces administrative back-and-forth with better-prepared course selections.
+- Consolidates learning outcomes, prerequisites, credit checks, and timetable planning in one place.
+- Simplifies navigation of UQ course information for students unfamiliar with the system.
+
+#### Gain Creators
+- Speeds up approval and enrollment preparation for exchange semesters.
+- Increases the chance that selected courses will transfer successfully.
+- Reduces approval-cycle revisions by pre-validating course matching assumptions.
+- Gives exchange students a smoother, lower-stress planning experience.
