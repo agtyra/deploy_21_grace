@@ -7,9 +7,10 @@
 - **Exchange or visiting students** who must match UQ subjects against their home university requirements and credit rules.
 
 ## Value Propositions
-- A streamlined and user-friendly course selection process that reduces confusion and time consumption for UQ students.
-- A centralized platform that consolidates all necessary information and resources for course selection, making it easier for students to access and use. [This was identified as a problem students faced in interviews.](./learning_card.md#hypothesis-2-students-use-a-variety-of-sources-from-a-vareity-of-places-to-help-course-selection)
-- Personalized course recommendations based on students' study plans, preferences, and past student reviews.
+- A guided course-planning experience for **first-year and early-degree students** that explains requirements, available courses, and next steps in a simple way.
+- A requirement-matching and prerequisite-checking tool for **students in dual degrees, extended majors, or other non-standard programs** so they can quickly see which courses satisfy multiple paths.
+- A comparison and filtering platform for **students in elective-heavy degrees** that helps them sort courses by workload, difficulty, relevance, and student feedback.
+- A credit and equivalency aware course selection tool for **exchange or visiting students** that helps them match UQ subjects to their home university rules and avoid invalid choices.
 
 ## Channels
 - A dedicated third-party website accessible to UQ students
