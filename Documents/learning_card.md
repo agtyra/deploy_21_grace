@@ -11,6 +11,8 @@ UQ Students find the process of choosing courses confusing or time-consuming.
 We observed:
 We found that roughly 7/10 students found the process of choosing courses either difficult or time consuming this semester. Students reported difficulties with things such as [elective choice](../Interviews/Iteration_1/Jinhan/Jinhan_20260319.md) and [finding course information](../Interviews/Iteration_1/Laura/Laura_2026_03_26_3.md) in particular.
 
+This ended up being less than what we had assumed when we first drafted our hypothesis but upon further analysing the data it appears that while we weren't accurate in our assessment of the entire UQ student population it was perhaps the case that a certain subset of students might be more susceptible to the pain points we were trying to discover.
+
 **LEARNING AND INSIGHTS**
 
 From that we learnt that:
@@ -22,6 +24,8 @@ In terms of time taken we found that UQ students ended up taking a pretty variab
 
 Therefore we will:
 Based on these findings we will be focusing on specifically on the identified pain points of elective choice and the difficulty students found in finding course information during our product development. If we can specifically focus on these two areas of difficulty identified in our research we believe we can create a valuable product for UQ students. Furthermore while we found the pain points and extent of the problem with regards to course selection being time consuming to be too variable to properly target we hope that by addressing the specific difficulties we identified we will be able to alleviate some of the time consuming aspects of course selection as a byproduct of making the process easier.
+
+Furthermore in conducting our interviews we found that while only 7/10 UQ students interviewed reported finding course selection to be difficult or time consuming, those students who did were more often than not first year students who were still unfamiliar with the process. Likewise students interviewed who were in their later years of study reported having difficulties [earlier on in their time at UQ](../Interviews/Iteration_1/Laura/Laura_2026_03_26_1.md) further suggesting this correlation. Therefore it would perhaps be a good idea for us to conduct more interviews specifically with first year students so as to assess whether they might be the best customer base who would get the most value out of our product. 
 
 ## [Hypothesis 2: Students use a variety of sources from a vareity of places to help course selection:](./test_card.md#hypothesis-2-students-use-a-variety-of-sources-from-a-vareity-of-places-to-help-course-selection)
 
@@ -36,6 +40,8 @@ UQ students use multiple scattered sources (course profiles, forums, friends, et
 We observed:
 We found that roughly two thirds (6.7/10) of students interviewed used a variety of different resources when choosing their courses. We also found that the majority of the students surveyed reported asking for [peer advice or checking online](../Interviews/Iteration_1/Kayla/Kayla_20260319_1.md) for qualitative assessment of their prospective courses. While we found that most students used UQ resources (course profiles, study plans etc.) for their course selection, many also used external resources particularly when it came to getting peer feedback on courses.
 
+Like with our first hypothesis, we ended up finding that less students than we guessed were using a wide variety of sources from a variety of places. However despite our hypothesis being technically wrong, we still managed to gather some useful data about how and why students use a variety of sources as well as further details pointing us towards the first year students as a customer segment for our product.
+
 **LEARNING AND INSIGHTS**
 
 From that we learnt that:
@@ -47,3 +53,5 @@ When it came to peer feedback on courses this was by far the most common reason 
 
 Therefore we will:
 As a result of these findings we will likely focus on first year students as our main customers for this project as we found they are the most likely to be using the kind of resource we hope to create and will therefore get the most value out of it. As these students are using the greatest variety of information, some attempt to centralise the information with regards to course selection we feel would be very useful as we [also found when investigating our other hypothesis.](./learning_card.md#hypothesis-1-choosing-courses-is-confusing) Furthermore based on how important it seemed to the students being interviewed, some mechanism for viewing peer feedback within our product could be something useful to explore as that was shown to be one of the main reasons students explored external resources for course selection.
+
+Similarly to our first hypothesis, due to our hypothesis in this case being proven false (6.7/10 as opposed to 7/10) we think it would be a good idea to conduct further research in this space, particularly as it relates to the first year students at UQ as further analysis of their interaction with a wide variety of resources when choosing courses could yield further data about this potential customer segment. As discussed previously, the results of this round of interviews suggests a focus on this customer segment and therefore when conducting further interviews we believe they should be the focus.
