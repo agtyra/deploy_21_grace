@@ -1,1 +1,77 @@
-Alright, so what's your name? Lucas Bradshaw. And um, what degree are you doing? I'm doing a bachelor of maths and a bachelor of science. And what year is this? I mean, what is your, like, what year are you doing? Is this your 1st year, 2nd year? This is my 1st year. First year, right. So how was your experience while choosing the courses for your main year, your semester? Um, it was pretty difficult, I'd say. Like, I had a hard time, like, figuring out what I had to actually do and the information to actually tell me what to do or some, like, really, um, that helpful. All right. When you were choosing your courses, what did you prioritise? For example, like, did you choose, um, oh, what's it called? More, more, more time at uni, more recorded lessons, more, you know, the one like, how to explain it? Oh, I prioritise like coming into you anymore. All right. And like delayed feeling, so... And what are you majoring in? Or what do you want to major in? If you had any idea? I'm awful maths. I would think, I think I'm going to do like a, maybe applied mass, and I'm not really sure about my science. degree yet. All right. Wait, a second. How long did it take for you to finalise your courses for this semester? Mm, that might have taken about... two, three weeks. Two, three weeks. And um, what, what, what made you take that long to finalise the courses? Um, the information on, like, what that causes actually were is is not really a helpful talk. like outlining what it actually is. Okay. That I found. Oh, nice. And did you use any tools or resources while selecting your courses? None besides the YouTube website and timetable itself. Ah, that's great to hear. If you could improve any improve the way of how the courses are selected at UQ, how would you do so? Um, just more information about, uh, like the proper processes and steps to do it. I guess, and what it all actually means for your timetable. All right, so information is like a key thing for you. Yeah, yeah. And if one software could do all this, for example, you know, give you more information about the courses and great ways to like select them. Would you use that, would you use that software? Yeah, yeah, of course, I'd be like really helpful if I had, if I was back then, yeah. Yeah. But thank you for your time, Lucas, and I really appreciate it. Thank you so much.
+Speaker 1:
+Alright, so what’s your name?
+
+Speaker 2:
+Lucas Bradshaw.
+
+Speaker 1:
+And what degree are you doing?
+
+Speaker 2:
+I’m doing a Bachelor of Mathematics and a Bachelor of Science.
+
+Speaker 1:
+And what year are you in? Is this your first or second year?
+
+Speaker 2:
+This is my first year.
+
+Speaker 1:
+So how was your experience choosing courses for your first semester?
+
+Speaker 2:
+It was pretty difficult, I’d say. I had a hard time figuring out what I actually had to do, and the information available wasn’t really that helpful.
+
+Speaker 1:
+When you were choosing your courses, what did you prioritise? For example, more time on campus, recorded lectures, things like that?
+
+Speaker 2:
+I prioritised coming into uni more, and having a more flexible schedule.
+
+Speaker 1:
+And what are you planning to major in?
+
+Speaker 2:
+I think I’ll do something like Applied Maths, but I’m not really sure about my science degree yet.
+
+Speaker 1:
+How long did it take you to finalise your courses for this semester?
+
+Speaker 2:
+Probably about two to three weeks.
+
+Speaker 1:
+What made it take that long?
+
+Speaker 2:
+The information about what the courses actually were wasn’t very helpful. It didn’t clearly outline what each course involved.
+
+Speaker 1:
+Did you use any tools or resources while selecting your courses?
+
+Speaker 2:
+Not really—just the university website and the timetable.
+
+Speaker 1:
+If you could improve the way courses are selected at the university, what would you change?
+
+Speaker 2:
+I’d add more information about the proper process and steps, and explain what everything actually means for your timetable.
+
+Speaker 1:
+So clear information is a key thing for you?
+
+Speaker 2:
+Yeah, definitely.
+
+Speaker 1:
+If a software tool could provide that—like better course information and easier selection—would you use it?
+
+Speaker 2:
+Yeah, of course. It would’ve been really helpful when I was choosing.
+
+Speaker 1:
+Alright, thank you for your time, Lucas. I really appreciate it.
+
+Speaker 2:
+Thank you.
