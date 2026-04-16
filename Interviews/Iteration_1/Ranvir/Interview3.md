@@ -1,1 +1,77 @@
-All right, um so what's your name? Daniel. I'm Diana, nice to meet you. And what are you studying at uni? I'm currently studying bachelor of business management. This is my last semester. 3rd semester. Alright, nice. How was your experience choosing the courses for this semester? I think they're actually pretty good. Pretty good. Did you find any difficulties or any issues while choosing your courses? Oh, no, uh, I'm just doing very well of them. Okay, nice. And um, when choosing your courses, what did you prioritise the most? For example, did you prioritise your time, um, being at uni? Did you prioritise different days? Like, how did you prioritise your courses? Um, I think I'll just, um, put all, uh, put all the causes on the exactly 2 dates, 2 days, yeah. And other times I can do some revision and take a rest. Nice, nice. And how long did it take for you to fully, um, set your courses for the semester? Um, I think 30 minutes will be quite enough. 30 minutes. And, um, were there any resources or anything that you use to help you plan your courses? Um, I don't think there is some any, I would just take a look at the timetables and just, for example, I would like to take a rest on, I would like to have classes on Monday and Thursday and I will just allocate them into these. All right, that's nice to hear. Um, all right. If there's anything you could improve in the selection of courses or how it's done, what would you have? what would you do? Um, I think I would just probably make it easier because, like, there's so many classes on the list. And if you just select one class and you cannot, you cannot remember other courses, when is the other courses? Yeah, I've heard that was a pretty big issue regarding other students. So what did you, when looking for those courses, what was like, where did you have to go to actually look at what courses you were doing? Uh, I would just go to YouTube website. Yeah, official website to see. All right, and um, were there any other parts um, during the course choosing that made it a little bit difficult for you other than that? Um, I don't think so, but, uh, if they can just have a, have a new website page that can just, uh, can tell every student, like, they specifically what courses they need to choose, uh, in the entire uni life, that will be better. Oh, nice. And if there was an app which would help you find course information, what kind of information would you like to have displayed on that app? Um, course profile and the time, yeah. The times. And let's say if someone had created this app, which would give you this course time, the information, and in like a list, makes it easier. Would you would you use this app? Definitely, yeah. Definitely. All right. Well, thank you so much for your time. Daniel, it was really nice to meet you. No worries.
+Speaker 1:
+Alright, so what’s your name?
+
+Speaker 2:
+Daniel.
+
+Speaker 1:
+I’m Diana, nice to meet you. What are you studying at uni?
+
+Speaker 2:
+I’m currently studying a Bachelor of Business Management. This is my last semester—my third semester.
+
+Speaker 1:
+Alright, nice. How was your experience choosing courses for this semester?
+
+Speaker 2:
+I think it was actually pretty good.
+
+Speaker 1:
+Did you find any difficulties or issues while choosing your courses?
+
+Speaker 2:
+No, not really. I’m quite familiar with them.
+
+Speaker 1:
+When choosing your courses, what did you prioritise the most? For example, your time on campus or specific days?
+
+Speaker 2:
+I tried to put all my courses into two days. That way, I can use the rest of the time for revision and rest.
+
+Speaker 1:
+Nice. And how long did it take you to fully set your courses for the semester?
+
+Speaker 2:
+About 30 minutes.
+
+Speaker 1:
+Did you use any resources or tools to help you plan your courses?
+
+Speaker 2:
+Not really. I just looked at the timetable and arranged everything based on my preference—for example, having classes on Monday and Thursday.
+
+Speaker 1:
+Alright, that’s good to hear. If there’s anything you could improve about the course selection process, what would you change?
+
+Speaker 2:
+I think it should be easier to navigate. There are so many classes listed, and when you select one, it’s hard to remember the details of others.
+
+Speaker 1:
+That makes sense—other students have mentioned that too. Where did you go to actually look at your courses?
+
+Speaker 2:
+I just used the university’s official website.
+
+Speaker 1:
+Were there any other parts of course selection that made it difficult?
+
+Speaker 2:
+Not really, but it would be helpful if there was a page that clearly showed students exactly what courses they need to take across their entire degree.
+
+Speaker 1:
+That’s a good point. If there was an app to help you find course information, what kind of information would you want it to show?
+
+Speaker 2:
+Course profiles and class times.
+
+Speaker 1:
+And if someone created an app that showed all that information in an easy-to-read list, would you use it?
+
+Speaker 2:
+Definitely, yeah.
+
+Speaker 1:
+Alright, thank you so much for your time, Daniel. It was really nice to meet you.
+
+Speaker 2:
+No worries.
