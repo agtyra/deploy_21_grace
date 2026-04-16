@@ -1,2 +1,73 @@
-All right, um, so what's your name? My name is Muskan. And on what degree are you doing? So, I'm in my 2nd year of masters of molecular biology. Perfect. Um, um, how was your experience choosing your courses for a semester? It was quite quick for me because I did my bachelor's in microbiology, and I wanted to go into molecular diagnostic as a major thing. So in University of Queensland, it was one of the cores, either I have to choose by technology or molecular biology. So it was easy for me if I have to go in the molecular course, it was easy for me to choose molecular biology. Nice. When choosing your courses, what did you mainly prioritise and why? I mainly prioritised the bi-informatics and I kind of figure out that immunology and when bi-informatics was in the molecular biology course, and it could help me more in the statistics. So I kind of figured out that there's a 6 unit course in bioinphomedics and that's how I figured out that it gonna help me in the analysis, like data analysis. So that's why I chose it. Okay, nice. How long did it take you, on average, to choose the courses for your semester? Honestly, it took me 2 days, but because I was going through all the courses. So I was mainly focussed in immunology, but because it had the Python language and our language in it. So I kind of figured out like, I'm not, I'm only from the medical background, not in the non-merical, like, not in the tech background. So it actually helped me to figure out like I can learn more through the languages, which is our language. So it hardly took me 2 days to realise that I can actually learn more through molecular biology than any other course. Comparably by technology. Okay. And when choosing these courses, did you use any tools, any resources like the YouTube, PDF or anything? Yeah, actually, I got information through YouTube website and the dashboard from the UQPoral. Um, from my one of my friend and she helped me out. How can we figure out the course, information and what are the units present in it? So I kind of figure out from the UQ website through that they have been like buying for medics scores, which actually helped me out to learn more about the languages. So yes, mainly through the YouTube website. Perfect. Were there any parts while choosing your courses that you found a bit difficult or irritating or anything which confused you? The main thing that confused me was the languages. So, um, I wasn't sure, was it like, it gonna be a basic language that gonna, um, be introduced in a course or it gonna be a high level. So after studying in my 1st semester, I felt like, oh, it was just the basic. And while I was choosing the course, I thought it going to be an advanced one. So, that was the main thing that you can actually, um, put in the description of the bi-informed course that it's just the basic, uh, language, not the heavy, or the advanced, uh, our language that actually introduced in the, um, B-Tech or something. But yes, they just introduced the very basic version of our language in our course or the Python, like hardly a single unit of Python. So they could actually mention in it rather than explaining it a bit like it couldn't be advanced one. And I'm building all that. Were there any other things that you would like to improve? Um, in this UQ, like, in the UQ call selection, anything you'd like to, like, improve a buildup on or anything? I actually want UQ to introduce more about the scope of a particular course because feeling like doing the molecular biology, I feel like we have caught particular technologies or techniques that we can learn. But while selecting the project, they are limited projects that are available for us. So what I've seen is part technology have got more projects because they have got agriculture units in it. They have got food technology, immunology units in it, and we can also choose that, but they are part of electives. So we can only choose electives if we have to go further in it. And because we have chosen molecular diagnostic, we never want to go in the elective subjects. Right? So I would like, um, Yuki to introduce more like if it has got scope in it or not. Or sometimes buy informatics, like a particular subject is based in biotechnology, as well as moleculapology, but it is more advanced in biotechnology. So I want UQ to mention that, oh, it has got more advanced version in the bi-technology unit. Yeah, that's it. Okay, so, um, if we had like a website which displayed course information, like building on what you said, how it should have that type of like the scope of it, is there anything else, any type, any other type of information or any other type of description that you think would be beneficial on that type of website? I think UP has given the dashboard thing. Um, because I'm not sure what they are explaining in the biotechnology. So so far, molecular molecular biology, what they have explained is fair enough, like what they have explained. But what they are explaining in biotechnology, I think they should also be a side that can compare the courses or the programs we can actually choose before actually doing the program. Like actually choosing the degree so that we can compare the degrees we are choosing it rather than just choosing the course. We can actually compare the degrees like, oh, what's there in the food technology, what there is in bi-technology over there is in multiplying diagnostic. Perfect. Let's say it's the next semester and you're choosing your courses. If you are shown or introduced a website, which would do everything you said, show the scope, compare different courses, and just enough information. How likely would you be to use this website? I would definitely use it because I would definitely prefer biotechnology, then molecular biology because I've seen there are so many biotechnology companies available in Australia. They are so good in scope and they have got more experience because they have got diverse subjects related to um, big, um, agriculture units as well and food units as well. So I would definitely choose by technology over molecular technostic and that site can actually help me to figure out what subject to choose. So I would definitely choose any kind of the, I would definitely um, go up to any of the site that can actually compare it. Mm, perfect. And just another last thing, um, if, if, um, if you ever came across somebody who was struggling with their course selection or their degree selection, how likely would you be to recommend this type of website if you find it suitable for yourself? I would definitely, definitely recommend because I think it's easy for the student after the bachelor's, you have a limited knowledge. Like you have the knowledge of the subject that you have studied. So if you want to do anything in the majors, you have to, uh, you are doing it because you are interested in it rather than doing it only for the scope. Because you are interested in it and you also see that there is a scope, then you do it like, yeah, you're sure about it. Oh, I'm not doing it only for I'm interested, because you know that there is a future in it. So definitely I would recommend that side. Perfect. Thank you so much for your time, and you have a good day. Thank you. Have a good one.
+Interview Transcript
 
+Speaker 1:
+Alright, so what’s your name?
+
+Speaker 2:
+My name is Muskan.
+
+Speaker 1:
+And what degree are you doing?
+
+Speaker 2:
+I’m in my second year of a Master of Molecular Biology.
+
+Speaker 1:
+How was your experience choosing your courses for the semester?
+
+Speaker 2:
+It was quite quick for me because I did my bachelor’s in microbiology and already knew I wanted to go into molecular diagnostics. At the University of Queensland, I had to choose between biotechnology and molecular biology, so it was easy for me to pick molecular biology.
+
+Speaker 1:
+When choosing your courses, what did you mainly prioritise and why?
+
+Speaker 2:
+I prioritised bioinformatics. I realised it would help me with data analysis and statistics. There was a 6-unit course in bioinformatics, and I knew it would be useful for developing those skills.
+
+Speaker 1:
+How long did it take you to choose your courses?
+
+Speaker 2:
+About two days, mainly because I was going through all the options. I was initially focused on immunology, but when I saw it involved programming languages like Python and R, I reconsidered. I realised I could still learn those basics through molecular biology.
+
+Speaker 1:
+Did you use any tools or resources while selecting your courses?
+
+Speaker 2:
+Yes, mainly the university website and the student portal. A friend also helped me understand how to find course information and unit details.
+
+Speaker 1:
+Were there any parts of the process that you found confusing or difficult?
+
+Speaker 2:
+Yes—the biggest confusion was around the programming languages. I wasn’t sure if they would be taught at a basic or advanced level. It would help if course descriptions clearly stated that the programming is introductory, not advanced.
+
+Speaker 1:
+Were there any other improvements you would suggest?
+
+Speaker 2:
+I’d like the university to better explain the scope of each course. For example, some programs offer more project opportunities than others. Biotechnology has more diverse options like agriculture and food technology, while molecular biology has fewer projects. This kind of comparison should be clearer.
+
+Speaker 1:
+If there was a website that displayed course information—including scope and comparisons between degrees—what else would you want it to include?
+
+Speaker 2:
+A comparison feature between different degrees would be really helpful. For example, being able to compare biotechnology, food technology, and molecular biology side by side before choosing.
+
+Speaker 1:
+If such a website existed, how likely would you be to use it?
+
+Speaker 2:
+I would definitely use it. It could even influence my decision—for example, I might have chosen biotechnology instead because it has broader career opportunities in Australia.
+
+Speaker 1:
+And if you found it useful, how likely would you be to recommend it to others?
+
+Speaker 2:
+I would definitely recommend it. Students often choose based on interest, but it’s also important to understand career scope. A tool like this would help balance both.
+
+Speaker 1:
+Perfect. Thank you so much for your time, and have a great day.
+
+Speaker 2:
+Thank you, you too.
