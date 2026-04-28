@@ -12,6 +12,7 @@
 - A comparison and filtering platform for **students in elective-heavy degrees** that helps them sort courses by workload, difficulty, relevance, and student feedback.
 - A credit and equivalency aware course selection tool for **exchange or visiting students** that helps them match UQ subjects to their home university rules and avoid invalid choices.
 - A platform for **course instructors** to clearly present course structure, assessment updates, and prerequisite information, helping students understand course expectations while reducing repetitive questions to instructors.
+
 ## Channels
 - A dedicated third-party website accessible to UQ students
 - Word-of-mouth referrals among students
