@@ -19,10 +19,20 @@
 - Student communities (Reddit, Discord, university forums) and partering up with university clubs and societies.
 
 ## Customer Relationships
-- Providing support and guidance through the course selection process, possibly through an AI agent or a FAQ section on the website.
-- Offering filtering and personalization features that allow students to tailor course recommendations based on their individual needs and preferences.
-- Displaying reviews and ratings from past students to help current students make informed decisions.
-- VIP personalized customization
+Self-service interaction model:
+- The platform is designed primarily for independent use,     enabling users to access information and make decisions without requiring direct human interaction.
+Guided but non-intrusive support:
+- Structured guidance is embedded within the platform (e.g. onboarding flows, prompts), allowing users to feel supported while maintaining autonomy.
+Trust through transparency and accuracy:
+- The relationship is built on providing clear, consistent, and reliable information, particularly regarding prerequisites, workload, and assessments.
+Peer-driven credibility:
+- Trust is reinforced through the inclusion of student-generated feedback, reflecting the importance of peer opinions in course selection.
+On-demand support mechanisms:
+- Assistance (e.g. FAQs or AI-based help) is available when required, without forming the primary mode of interaction.
+Ongoing engagement across the academic lifecycle:
+- The platform is positioned as a recurring tool used throughout a student’s degree, rather than a one-time service.
+Neutral and student-focused positioning:
+- The platform maintains an unbiased and student-centric identity, avoiding perceptions of institutional or commercial bias.
 
 ## Revenue Streams
 - Freemium subscription model (premium features for advanced tools)
