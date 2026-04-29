@@ -238,3 +238,157 @@ Helps instructors communicate course design more effectively.
 Improves transparency of course expectations for students.
 Encourages better feedback loops between students and instructors.
 
+## 6. Students choosing electives
+
+### Customer Profile
+
+#### Customer Jobs
+- Choose electives that match their interests, goals, and degree requirements.
+- Compare courses based on workload, difficulty, assessment style, and relevance.
+- Find reliable information before enrolling in a course.
+
+#### Pains
+- Course choices can feel overwhelming because there are too many options.
+- Official course descriptions often do not clearly show workload, difficulty, or assessment expectations.
+- Students may need to check multiple sources, including course profiles, Reddit, Discord, friends, or past students.
+- It is hard to know whether a course will actually be useful or manageable before taking it.
+
+#### Gains
+- A simple way to filter and compare electives.
+- Clear information about workload, assessments, prerequisites, and course relevance.
+- More confidence when choosing courses.
+- Peer feedback that helps students understand what a course is really like.
+
+### Value Map
+
+#### Products / Services
+- An elective comparison dashboard with filters for workload, difficulty, assessment type, topic area, and relevance.
+- Easy-to-read course summaries showing prerequisites, assessments, workload, and key course details.
+- Student review and rating summaries based on peer feedback.
+
+#### Pain Relievers
+- Reduces the time spent searching across different platforms.
+- Makes hidden factors such as workload and assessment pressure easier to understand.
+- Helps students avoid choosing courses that do not match their expectations.
+- Provides peer-informed insights beyond official course descriptions.
+
+#### Gain Creators
+- Helps students make faster and more confident elective decisions.
+- Supports better semester planning by balancing workload and difficulty.
+- Gives students a clearer idea of whether a course fits their goals.
+
+## 6. Students planning courses across semesters
+
+### Customer Profile
+
+#### Customer Jobs
+- Plan courses semester by semester.
+- Make sure prerequisites and core courses are completed in the right order.
+- Avoid delaying graduation because of poor course planning.
+- Understand how current choices affect future semester options.
+
+#### Pains
+- Students often feel unsure about how to plan beyond the current semester.
+- Prerequisite chains can be confusing and easy to miss.
+- Degree requirements are sometimes difficult to interpret.
+- Students may only realise too late that they cannot take a course because a prerequisite was missed.
+
+#### Gains
+- A guided planning process that shows what to take and when.
+- Clear visibility of prerequisites, core courses, electives, and remaining requirements.
+- More confidence that their study plan is valid.
+- Less stress when planning future semesters.
+
+### Value Map
+
+#### Products / Services
+- A guided semester-by-semester course planner.
+- A prerequisite and progression checker.
+- A planning view that maps completed, current, and future courses.
+
+#### Pain Relievers
+- Helps students identify missing prerequisites early.
+- Reduces uncertainty when planning future semesters.
+- Makes degree progression easier to understand.
+- Lowers the risk of choosing courses that delay graduation.
+
+#### Gain Creators
+- Gives students a clearer path through their degree.
+- Makes long-term course planning more manageable.
+- Supports better academic decision-making across the whole degree.
+
+## 7. Students checking degree requirements
+
+### Customer Profile
+
+#### Customer Jobs
+- Check whether a course fits their degree, major, minor, or elective requirements.
+- Understand how courses count across different program rules.
+- Confirm that course choices satisfy degree progression requirements.
+
+#### Pains
+- Requirement information can be spread across different pages and documents.
+- It is hard to know whether a course counts as an elective, core course, or program requirement.
+- Students may need to ask advisors or other students to confirm their choices.
+- Mistakes in requirement checking can affect graduation planning.
+
+#### Gains
+- A clear way to check whether a course fits their program.
+- Better understanding of remaining degree requirements.
+- Less reliance on manual checking or advisor confirmation.
+- More confidence before enrolling.
+
+### Value Map
+
+#### Products / Services
+- A requirement-matching tool that shows how each course counts toward degree requirements.
+- A prerequisite and program-rule checker.
+- A course fit summary explaining whether a subject matches the student’s program needs.
+
+#### Pain Relievers
+- Reduces confusion around degree rules and course eligibility.
+- Helps students avoid choosing courses that do not count toward their program.
+- Saves time by putting requirement information in one place.
+
+#### Gain Creators
+- Improves confidence in enrollment decisions.
+- Helps students stay on track for graduation.
+- Makes program planning more transparent and easier to manage.
+
+## 8. Students relying on peer feedback
+
+### Customer Profile
+
+#### Customer Jobs
+- Find out what a course is really like before enrolling.
+- Use peer opinions to understand teaching quality, tutor experience, workload, and assessment expectations.
+- Compare official course information with real student experiences.
+
+#### Pains
+- Official information may not reflect the real student experience.
+- Peer opinions are scattered across friends, group chats, Reddit, Discord, and forums.
+- Some feedback is subjective, outdated, or hard to compare.
+- Students may not know which reviews are trustworthy.
+
+#### Gains
+- Structured peer feedback that is easier to read and compare.
+- More realistic expectations about workload, difficulty, and assessment style.
+- Better understanding of teaching quality and course experience.
+- Greater confidence when deciding whether to take a course.
+
+### Value Map
+
+#### Products / Services
+- A student feedback and review summary system.
+- Course ratings grouped by workload, difficulty, teaching quality, assessment style, and usefulness.
+- A peer insight section attached to each course summary.
+
+#### Pain Relievers
+- Organizes scattered peer feedback into a clearer format.
+- Reduces reliance on random or informal advice.
+- Helps students identify common patterns across multiple reviews.
+
+#### Gain Creators
+- Gives students a more realistic view of each course.
+- Supports better course selection through peer-driven credibility.
+- Helps students choose courses that match their learning preferences.
