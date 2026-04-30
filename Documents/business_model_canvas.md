@@ -127,9 +127,9 @@ Academic staff who experience repeated student enquiries caused by unclear commu
 ### Customer Profile
 
 #### Customer Jobs
-- Check which courses satisfy multiple degree or major requirements.
+- Check whether a course fits their degree, major, minor, or elective requirements.
 - Track prerequisites, core subjects, and progression rules across programs.
-- Make sure course choices still allow them to graduate on time.
+- Confirm that course choices satisfy degree progression requirements.
 
 #### Pains
 - Requirements are more complex and harder to compare across programs.
@@ -140,6 +140,7 @@ Academic staff who experience repeated student enquiries caused by unclear commu
 - A clear way to see how each course fits into more than one requirement.
 - Better visibility of prerequisites, progression, and remaining degree needs.
 - Less confusion when planning around changing program structures.
+- Less reliance on manual checking or advisor confirmation.
 
 ### Value Map
 #### Products / Services
@@ -151,7 +152,7 @@ Academic staff who experience repeated student enquiries caused by unclear commu
 - Reduces errors from using the wrong course list or study plan.
 - Makes it easier to confirm whether a course satisfies multiple requirements.
 - Lowers the need to rely on advisors for every planning decision.
-
+- Saves time by putting requirement information in one place.
 #### Gain Creators
 - Gives students clearer control over complex degree planning.
 - Helps them stay on track for graduation.
@@ -165,8 +166,8 @@ Academic staff who experience repeated student enquiries caused by unclear commu
 #### Customer Jobs
 - Browse courses by subject area and faculty, then compare elective options without needing course-code knowledge.
 - Balance workload and difficulty across the semester.
-- Select subjects that build useful skills for career goals or further study.
-
+- Choose electives that match their interests, goals, and degree requirements.
+- Choose courses for the semester without missing prerequisites or core subjects.
 #### Pains
 - Too many options make decision-making slow and overwhelming.
 - Official course descriptions often lack clear details on practical workload, teaching style, tutor quality, and assessment format.
@@ -178,6 +179,7 @@ Academic staff who experience repeated student enquiries caused by unclear commu
 - Student-informed insights about assessments, teaching quality, tutor experience, and outcomes.
 - Visibility of recent assessment changes before enrollment decisions.
 - More confidence that selected electives are both manageable and valuable.
+- Clear information about workload, assessments, prerequisites, and course relevance
 
 ### Value Map
 
@@ -186,6 +188,7 @@ Academic staff who experience repeated student enquiries caused by unclear commu
 - Student review and rating summaries with insights on teaching quality, tutor experience, and assessment expectations.
 - An assessment update tracker highlighting recent semester-level changes.
 - Personalized elective recommendations based on interests, goals, and completed courses.
+- A guided course-planning tool with degree and semester breakdowns.
 
 #### Pain Relievers
 - Reduces choice overload by narrowing electives to suitable options.
@@ -198,8 +201,8 @@ Academic staff who experience repeated student enquiries caused by unclear commu
 - Helps students choose electives that are both engaging and strategically useful.
 - Improves semester planning by balancing high- and low-intensity courses.
 - Increases satisfaction with course choices and perceived academic progress.
-
-
+- Makes course selection feel more manageable and less overwhelming.
+- Gives students a clearer idea of whether a course fits their goals.
 ## 4. Exchange or visiting students
 
 ### Customer Profile
@@ -280,124 +283,9 @@ Helps instructors communicate course design more effectively.
 Improves transparency of course expectations for students.
 Encourages better feedback loops between students and instructors.
 
-## 6. Students choosing electives
 
-### Customer Profile
 
-#### Customer Jobs
-- Choose electives that match their interests, goals, and degree requirements.
-- Compare courses based on workload, difficulty, assessment style, and relevance.
-- Find reliable information before enrolling in a course.
-
-#### Pains
-- Course choices can feel overwhelming because there are too many options.
-- Official course descriptions often do not clearly show workload, difficulty, or assessment expectations.
-- Students may need to check multiple sources, including course profiles, Reddit, Discord, friends, or past students.
-- It is hard to know whether a course will actually be useful or manageable before taking it.
-
-#### Gains
-- A simple way to filter and compare electives.
-- Clear information about workload, assessments, prerequisites, and course relevance.
-- More confidence when choosing courses.
-- Peer feedback that helps students understand what a course is really like.
-
-### Value Map
-
-#### Products / Services
-- An elective comparison dashboard with filters for workload, difficulty, assessment type, topic area, and relevance.
-- Easy-to-read course summaries showing prerequisites, assessments, workload, and key course details.
-- Student review and rating summaries based on peer feedback.
-
-#### Pain Relievers
-- Reduces the time spent searching across different platforms.
-- Makes hidden factors such as workload and assessment pressure easier to understand.
-- Helps students avoid choosing courses that do not match their expectations.
-- Provides peer-informed insights beyond official course descriptions.
-
-#### Gain Creators
-- Helps students make faster and more confident elective decisions.
-- Supports better semester planning by balancing workload and difficulty.
-- Gives students a clearer idea of whether a course fits their goals.
-
-## 6. Students planning courses across semesters
-
-### Customer Profile
-
-#### Customer Jobs
-- Plan courses semester by semester.
-- Make sure prerequisites and core courses are completed in the right order.
-- Avoid delaying graduation because of poor course planning.
-- Understand how current choices affect future semester options.
-
-#### Pains
-- Students often feel unsure about how to plan beyond the current semester.
-- Prerequisite chains can be confusing and easy to miss.
-- Degree requirements are sometimes difficult to interpret.
-- Students may only realise too late that they cannot take a course because a prerequisite was missed.
-
-#### Gains
-- A guided planning process that shows what to take and when.
-- Clear visibility of prerequisites, core courses, electives, and remaining requirements.
-- More confidence that their study plan is valid.
-- Less stress when planning future semesters.
-
-### Value Map
-
-#### Products / Services
-- A guided semester-by-semester course planner.
-- A prerequisite and progression checker.
-- A planning view that maps completed, current, and future courses.
-
-#### Pain Relievers
-- Helps students identify missing prerequisites early.
-- Reduces uncertainty when planning future semesters.
-- Makes degree progression easier to understand.
-- Lowers the risk of choosing courses that delay graduation.
-
-#### Gain Creators
-- Gives students a clearer path through their degree.
-- Makes long-term course planning more manageable.
-- Supports better academic decision-making across the whole degree.
-
-## 7. Students checking degree requirements
-
-### Customer Profile
-
-#### Customer Jobs
-- Check whether a course fits their degree, major, minor, or elective requirements.
-- Understand how courses count across different program rules.
-- Confirm that course choices satisfy degree progression requirements.
-
-#### Pains
-- Requirement information can be spread across different pages and documents.
-- It is hard to know whether a course counts as an elective, core course, or program requirement.
-- Students may need to ask advisors or other students to confirm their choices.
-- Mistakes in requirement checking can affect graduation planning.
-
-#### Gains
-- A clear way to check whether a course fits their program.
-- Better understanding of remaining degree requirements.
-- Less reliance on manual checking or advisor confirmation.
-- More confidence before enrolling.
-
-### Value Map
-
-#### Products / Services
-- A requirement-matching tool that shows how each course counts toward degree requirements.
-- A prerequisite and program-rule checker.
-- A course fit summary explaining whether a subject matches the student’s program needs.
-
-#### Pain Relievers
-- Reduces confusion around degree rules and course eligibility.
-- Helps students avoid choosing courses that do not count toward their program.
-- Saves time by putting requirement information in one place.
-
-#### Gain Creators
-- Improves confidence in enrollment decisions.
-- Helps students stay on track for graduation.
-- Makes program planning more transparent and easier to manage.
-
-## 8. Students relying on peer feedback
+## 6. Students relying on peer feedback
 
 ### Customer Profile
 
