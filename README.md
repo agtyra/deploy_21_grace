@@ -19,6 +19,7 @@ Ranvir Arora - 50276707 - s5027670 - ranvir.arora@student.uq.edu.au
 │   ├── business_model_canvas.md
 │   ├── competitor_analysis.md
 │   ├── learning_card.md
+│   ├── mvp_learning_card.md
 │   ├── mvp_test_card.md
 │   ├── team_values.md
 │   └── test_card.md
