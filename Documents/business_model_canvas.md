@@ -1,23 +1,29 @@
 # Business Model Canvas
 
 ## Customer Segments
-- **First-year and early-degree UQ** students who are learning how to build a study plan and choose courses for the first time.
-- **Students in dual degrees, extended majors, or other non-standard programs** who need to satisfy multiple course and prerequisite requirements.
-- **Students in elective-heavy degrees** who need to compare many course options and understand workload, difficulty, and relevance before deciding.
-- **Exchange or visiting students** who must match UQ subjects against their home university requirements and credit rules.
-- **Course instructors or lecturers** who want a clearer way to present course information, assessment structure, and prerequisites so that students can better understand course expectations before enrolling.
+Customer Segments (Updated)
+**First-year and early-degree UQ students**
+- Students who are unfamiliar with degree structures and course planning, and experience difficulty understanding progression pathways, prerequisite requirements, and how to build an effective semester plan.
+**Students in dual degrees, extended majors, or other non-standard programs**
+- Students with complex academic pathways who struggle to verify prerequisite chains, track overlapping program requirements, and confirm whether selected courses satisfy multiple degree constraints.
+**Students in elective-heavy degrees**
+- Students faced with a large number of course options who experience decision fatigue due to limited visibility into workload, difficulty, assessment style, relevance, and comparative course quality.
+**Exchange or visiting students**
+- Students requiring alignment between UQ course offerings and external institutional requirements, who face uncertainty around credit transfer, equivalency, and valid course selection.
+**Course instructors and lecturers**
+Academic staff who experience repeated student enquiries caused by unclear communication of course prerequisites, assessment structures, workload expectations, and course progression relevance.
 ## Value Propositions
-Guided course planning for first-year and early-degree students
+**Guided course planning for first-year and early-degree students**
 - Simplifies degree requirements and progression by providing clear, step-by-step planning support and next-step recommendations.
-Automated requirement matching and prerequisite validation for complex programs
+**Automated requirement matching and prerequisite validation for complex programs**
 - Enables students in dual degrees, extended majors, or non-standard pathways to efficiently verify course eligibility and satisfy overlapping requirements.
-Advanced course comparison and filtering for elective decision-making
+**Advanced course comparison and filtering for elective decision-making**
 - Allows students in elective-heavy degrees to evaluate courses based on workload, difficulty, assessment type, relevance, and peer feedback.
-Credit-aware course selection for exchange and visiting students
+**Credit-aware course selection for exchange and visiting students**
 - Aligns UQ course options with external university requirements, reducing the risk of invalid or non-transferable selections.
-Structured course communication platform for instructors
+**Structured course communication platform for instructors**
 - Provides a clear and standardised way to present course structure, assessments, and prerequisites, improving student understanding and reducing repetitive enquiries.
-Peer Feedback
+**Peer Feedback**
 - theough the use of student input reviews can be added for courses explaining about how the lectures are, or how the layout of the syllabus is
 
 ## Channels
@@ -26,19 +32,19 @@ Peer Feedback
 - Student communities (Reddit, Discord, university forums) and partering up with university clubs and societies.
 
 ## Customer Relationships
-Self-service interaction model:
+**Self-service interaction model:**
 - The platform is designed primarily for independent use,     enabling users to access information and make decisions without requiring direct human interaction.
-Guided but non-intrusive support:
+**Guided but non-intrusive support:**
 - Structured guidance is embedded within the platform (e.g. onboarding flows, prompts), allowing users to feel supported while maintaining autonomy.
-Trust through transparency and accuracy:
+**Trust through transparency and accuracy:**
 - The relationship is built on providing clear, consistent, and reliable information, particularly regarding prerequisites, workload, and assessments.
-Peer-driven credibility:
+**Peer-driven credibility:**
 - Trust is reinforced through the inclusion of student-generated feedback, reflecting the importance of peer opinions in course selection.
-On-demand support mechanisms:
+**On-demand support mechanisms:**
 - Assistance (e.g. FAQs or AI-based help) is available when required, without forming the primary mode of interaction.
-Ongoing engagement across the academic lifecycle:
+**Ongoing engagement across the academic lifecycle:**
 - The platform is positioned as a recurring tool used throughout a student’s degree, rather than a one-time service.
-Neutral and student-focused positioning:
+**Neutral and student-focused positioning:**
 - The platform maintains an unbiased and student-centric identity, avoiding perceptions of institutional or commercial bias.
 
 ## Revenue Streams
