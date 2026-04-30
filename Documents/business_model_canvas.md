@@ -7,11 +7,18 @@
 - **Exchange or visiting students** who must match UQ subjects against their home university requirements and credit rules.
 - **Course instructors or lecturers** who want a clearer way to present course information, assessment structure, and prerequisites so that students can better understand course expectations before enrolling.
 ## Value Propositions
-- A guided course-planning experience for **first-year and early-degree students** that explains requirements, available courses, and next steps in a simple way.
-- A requirement-matching and prerequisite-checking tool for **students in dual degrees, extended majors, or other non-standard programs** so they can quickly see which courses satisfy multiple paths.
-- A comparison and filtering platform for **students in elective-heavy degrees** that helps them sort courses by workload, difficulty, relevance, and student feedback.
-- A credit and equivalency aware course selection tool for **exchange or visiting students** that helps them match UQ subjects to their home university rules and avoid invalid choices.
-- A platform for **course instructors** to clearly present course structure, assessment updates, and prerequisite information, helping students understand course expectations while reducing repetitive questions to instructors.
+Guided course planning for first-year and early-degree students
+- Simplifies degree requirements and progression by providing clear, step-by-step planning support and next-step recommendations.
+Automated requirement matching and prerequisite validation for complex programs
+- Enables students in dual degrees, extended majors, or non-standard pathways to efficiently verify course eligibility and satisfy overlapping requirements.
+Advanced course comparison and filtering for elective decision-making
+- Allows students in elective-heavy degrees to evaluate courses based on workload, difficulty, assessment type, relevance, and peer feedback.
+Credit-aware course selection for exchange and visiting students
+- Aligns UQ course options with external university requirements, reducing the risk of invalid or non-transferable selections.
+Structured course communication platform for instructors
+- Provides a clear and standardised way to present course structure, assessments, and prerequisites, improving student understanding and reducing repetitive enquiries.
+Peer Feedback
+- theough the use of student input reviews can be added for courses explaining about how the lectures are, or how the layout of the syllabus is
 
 ## Channels
 - A dedicated third-party website accessible to UQ students
