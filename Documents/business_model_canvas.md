@@ -1,5 +1,34 @@
 # Business Model Canvas
 
+## accepted Hypotheses
+
+Hypothesis 1: Course filtering and comparison
+
+Result: Accepted
+Justification: 18/23 participants mentioned workload, difficulty, assessment style, or similar factors when choosing courses.
+
+Hypothesis 2: Course summaries (prerequisites, workload, assessments)
+
+Result: Accepted
+Justification: 20/23 participants identified these as essential information before enrolling.
+
+Hypothesis 3: Semester-by-semester planner
+
+Result: Accepted
+Justification: 15/23 participants described needing help planning across semesters.
+
+Hypothesis 4: Requirement matching and prerequisite checking
+
+Result: Accepted
+Justification: 18/23 participants reported difficulty verifying course eligibility and degree fit.
+
+Hypothesis 5: Peer feedback and recommendations
+
+Result: Accepted
+Justification: 19/23 participants relied on peers or online discussion when evaluating courses.
+
+The business model takes into consideration the accepted and refuted hyoptheses
+
 ## Customer Segments
 Customer Segments (Updated)
 **First-year and early-degree UQ students**
@@ -23,8 +52,8 @@ Academic staff who experience repeated student enquiries caused by unclear commu
 - Aligns UQ course options with external university requirements, reducing the risk of invalid or non-transferable selections.
 **Structured course communication platform for instructors**
 - Provides a clear and standardised way to present course structure, assessments, and prerequisites, improving student understanding and reducing repetitive enquiries.
-**Peer Feedback**
-- theough the use of student input reviews can be added for courses explaining about how the lectures are, or how the layout of the syllabus is
+**Integration of Peer Feedback**
+- Enables students to make informed decisions using insights from past student experiences.
 
 ## Channels
 - A dedicated third-party website accessible to UQ students
