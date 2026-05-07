@@ -1,17 +1,59 @@
 # Business Model Canvas
 
+## accepted Hypotheses
+
+Hypothesis 1: Course filtering and comparison
+
+Result: Accepted
+Justification: 18/23 participants mentioned workload, difficulty, assessment style, or similar factors when choosing courses.
+
+Hypothesis 2: Course summaries (prerequisites, workload, assessments)
+
+Result: Accepted
+Justification: 20/23 participants identified these as essential information before enrolling.
+
+Hypothesis 3: Semester-by-semester planner
+
+Result: Accepted
+Justification: 15/23 participants described needing help planning across semesters.
+
+Hypothesis 4: Requirement matching and prerequisite checking
+
+Result: Accepted
+Justification: 18/23 participants reported difficulty verifying course eligibility and degree fit.
+
+Hypothesis 5: Peer feedback and recommendations
+
+Result: Accepted
+Justification: 19/23 participants relied on peers or online discussion when evaluating courses.
+
+The business model takes into consideration the accepted and refuted hyoptheses
+
 ## Customer Segments
-- **First-year and early-degree UQ** students who are learning how to build a study plan and choose courses for the first time.
-- **Students in dual degrees, extended majors, or other non-standard programs** who need to satisfy multiple course and prerequisite requirements.
-- **Students in elective-heavy degrees** who need to compare many course options and understand workload, difficulty, and relevance before deciding.
-- **Exchange or visiting students** who must match UQ subjects against their home university requirements and credit rules.
-- **Course instructors or lecturers** who want a clearer way to present course information, assessment structure, and prerequisites so that students can better understand course expectations before enrolling.
+Customer Segments (Updated)
+**First-year and early-degree UQ students**
+- Students who are unfamiliar with degree structures and course planning, and experience difficulty understanding progression pathways, prerequisite requirements, and how to build an effective semester plan.
+**Students in dual degrees, extended majors, or other non-standard programs**
+- Students with complex academic pathways who struggle to verify prerequisite chains, track overlapping program requirements, and confirm whether selected courses satisfy multiple degree constraints.
+**Students in elective-heavy degrees**
+- Students faced with a large number of course options who experience decision fatigue due to limited visibility into workload, difficulty, assessment style, relevance, and comparative course quality.
+**Exchange or visiting students**
+- Students requiring alignment between UQ course offerings and external institutional requirements, who face uncertainty around credit transfer, equivalency, and valid course selection.
+**Course instructors and lecturers**
+Academic staff who experience repeated student enquiries caused by unclear communication of course prerequisites, assessment structures, workload expectations, and course progression relevance.
 ## Value Propositions
-- A guided course-planning experience for **first-year and early-degree students** that explains requirements, available courses, and next steps in a simple way.
-- A requirement-matching and prerequisite-checking tool for **students in dual degrees, extended majors, or other non-standard programs** so they can quickly see which courses satisfy multiple paths.
-- A comparison and filtering platform for **students in elective-heavy degrees** that helps them sort courses by workload, difficulty, relevance, and student feedback.
-- A credit and equivalency aware course selection tool for **exchange or visiting students** that helps them match UQ subjects to their home university rules and avoid invalid choices.
-- A platform for **course instructors** to clearly present course structure, assessment updates, and prerequisite information, helping students understand course expectations while reducing repetitive questions to instructors.
+**Guided course planning for first-year and early-degree students**
+- Simplifies degree requirements and progression by providing clear, step-by-step planning support and next-step recommendations.
+**Automated requirement matching and prerequisite validation for complex programs**
+- Enables students in dual degrees, extended majors, or non-standard pathways to efficiently verify course eligibility and satisfy overlapping requirements.
+**Advanced course comparison and filtering for elective decision-making**
+- Allows students in elective-heavy degrees to evaluate courses based on workload, difficulty, assessment type, relevance, and peer feedback.
+**Credit-aware course selection for exchange and visiting students**
+- Aligns UQ course options with external university requirements, reducing the risk of invalid or non-transferable selections.
+**Structured course communication platform for instructors**
+- Provides a clear and standardised way to present course structure, assessments, and prerequisites, improving student understanding and reducing repetitive enquiries.
+**Integration of Peer Feedback**
+- Enables students to make informed decisions using insights from past student experiences.
 
 ## Channels
 - A dedicated third-party website accessible to UQ students
@@ -19,19 +61,19 @@
 - Student communities (Reddit, Discord, university forums) and partering up with university clubs and societies.
 
 ## Customer Relationships
-Self-service interaction model:
+**Self-service interaction model:**
 - The platform is designed primarily for independent use,     enabling users to access information and make decisions without requiring direct human interaction.
-Guided but non-intrusive support:
+**Guided but non-intrusive support:**
 - Structured guidance is embedded within the platform (e.g. onboarding flows, prompts), allowing users to feel supported while maintaining autonomy.
-Trust through transparency and accuracy:
+**Trust through transparency and accuracy:**
 - The relationship is built on providing clear, consistent, and reliable information, particularly regarding prerequisites, workload, and assessments.
-Peer-driven credibility:
+**Peer-driven credibility:**
 - Trust is reinforced through the inclusion of student-generated feedback, reflecting the importance of peer opinions in course selection.
-On-demand support mechanisms:
+**On-demand support mechanisms:**
 - Assistance (e.g. FAQs or AI-based help) is available when required, without forming the primary mode of interaction.
-Ongoing engagement across the academic lifecycle:
+**Ongoing engagement across the academic lifecycle:**
 - The platform is positioned as a recurring tool used throughout a student’s degree, rather than a one-time service.
-Neutral and student-focused positioning:
+**Neutral and student-focused positioning:**
 - The platform maintains an unbiased and student-centric identity, avoiding perceptions of institutional or commercial bias.
 
 ## Revenue Streams
@@ -85,9 +127,9 @@ Neutral and student-focused positioning:
 ### Customer Profile
 
 #### Customer Jobs
-- Check which courses satisfy multiple degree or major requirements.
+- Check whether a course fits their degree, major, minor, or elective requirements.
 - Track prerequisites, core subjects, and progression rules across programs.
-- Make sure course choices still allow them to graduate on time.
+- Confirm that course choices satisfy degree progression requirements.
 
 #### Pains
 - Requirements are more complex and harder to compare across programs.
@@ -98,6 +140,7 @@ Neutral and student-focused positioning:
 - A clear way to see how each course fits into more than one requirement.
 - Better visibility of prerequisites, progression, and remaining degree needs.
 - Less confusion when planning around changing program structures.
+- Less reliance on manual checking or advisor confirmation.
 
 ### Value Map
 #### Products / Services
@@ -109,7 +152,7 @@ Neutral and student-focused positioning:
 - Reduces errors from using the wrong course list or study plan.
 - Makes it easier to confirm whether a course satisfies multiple requirements.
 - Lowers the need to rely on advisors for every planning decision.
-
+- Saves time by putting requirement information in one place.
 #### Gain Creators
 - Gives students clearer control over complex degree planning.
 - Helps them stay on track for graduation.
@@ -123,8 +166,8 @@ Neutral and student-focused positioning:
 #### Customer Jobs
 - Browse courses by subject area and faculty, then compare elective options without needing course-code knowledge.
 - Balance workload and difficulty across the semester.
-- Select subjects that build useful skills for career goals or further study.
-
+- Choose electives that match their interests, goals, and degree requirements.
+- Choose courses for the semester without missing prerequisites or core subjects.
 #### Pains
 - Too many options make decision-making slow and overwhelming.
 - Official course descriptions often lack clear details on practical workload, teaching style, tutor quality, and assessment format.
@@ -136,6 +179,7 @@ Neutral and student-focused positioning:
 - Student-informed insights about assessments, teaching quality, tutor experience, and outcomes.
 - Visibility of recent assessment changes before enrollment decisions.
 - More confidence that selected electives are both manageable and valuable.
+- Clear information about workload, assessments, prerequisites, and course relevance
 
 ### Value Map
 
@@ -144,6 +188,7 @@ Neutral and student-focused positioning:
 - Student review and rating summaries with insights on teaching quality, tutor experience, and assessment expectations.
 - An assessment update tracker highlighting recent semester-level changes.
 - Personalized elective recommendations based on interests, goals, and completed courses.
+- A guided course-planning tool with degree and semester breakdowns.
 
 #### Pain Relievers
 - Reduces choice overload by narrowing electives to suitable options.
@@ -156,8 +201,8 @@ Neutral and student-focused positioning:
 - Helps students choose electives that are both engaging and strategically useful.
 - Improves semester planning by balancing high- and low-intensity courses.
 - Increases satisfaction with course choices and perceived academic progress.
-
-
+- Makes course selection feel more manageable and less overwhelming.
+- Gives students a clearer idea of whether a course fits their goals.
 ## 4. Exchange or visiting students
 
 ### Customer Profile
@@ -238,3 +283,42 @@ Helps instructors communicate course design more effectively.
 Improves transparency of course expectations for students.
 Encourages better feedback loops between students and instructors.
 
+
+
+## 6. Students relying on peer feedback
+
+### Customer Profile
+
+#### Customer Jobs
+- Find out what a course is really like before enrolling.
+- Use peer opinions to understand teaching quality, tutor experience, workload, and assessment expectations.
+- Compare official course information with real student experiences.
+
+#### Pains
+- Official information may not reflect the real student experience.
+- Peer opinions are scattered across friends, group chats, Reddit, Discord, and forums.
+- Some feedback is subjective, outdated, or hard to compare.
+- Students may not know which reviews are trustworthy.
+
+#### Gains
+- Structured peer feedback that is easier to read and compare.
+- More realistic expectations about workload, difficulty, and assessment style.
+- Better understanding of teaching quality and course experience.
+- Greater confidence when deciding whether to take a course.
+
+### Value Map
+
+#### Products / Services
+- A student feedback and review summary system.
+- Course ratings grouped by workload, difficulty, teaching quality, assessment style, and usefulness.
+- A peer insight section attached to each course summary.
+
+#### Pain Relievers
+- Organizes scattered peer feedback into a clearer format.
+- Reduces reliance on random or informal advice.
+- Helps students identify common patterns across multiple reviews.
+
+#### Gain Creators
+- Gives students a more realistic view of each course.
+- Supports better course selection through peer-driven credibility.
+- Helps students choose courses that match their learning preferences.

@@ -2,6 +2,10 @@
 
 ## Hypothesis 1: Students want to filter courses by workload, difficulty, assessment types, and relevance
 
+**RELATED LEARNING CARD**
+
+See: [Hypothesis 1 learning card](./mvp_learning_card.md#hypothesis-1-students-want-to-filter-courses-by-workload-difficulty-assessment-types-and-relevance)
+
 **HYPOTHESIS**
 
 We believe that:
@@ -29,6 +33,10 @@ Q1: When you are choosing electives, what factors do you usually think about fir
 Q2: If you could build your ideal way to compare courses, what filters or comparison options would you want to have?
 
 ## Hypothesis 2: Students want a repository of course summaries with prerequisites, assessments, and workload
+
+**RELATED LEARNING CARD**
+
+See: [Hypothesis 2 learning card](./mvp_learning_card.md#hypothesis-2-students-want-a-repository-of-course-summaries-with-prerequisites-assessments-and-workload)
 
 **HYPOTHESIS**
 
@@ -60,6 +68,10 @@ Q5: What makes course information easy or hard to understand when you are checki
 
 ## Hypothesis 3: Students want a guided semester-by-semester course planner
 
+**RELATED LEARNING CARD**
+
+See: [Hypothesis 3 learning card](./mvp_learning_card.md#hypothesis-3-students-want-a-guided-semester-by-semester-course-planner)
+
 **HYPOTHESIS**
 
 We believe that:
@@ -90,6 +102,10 @@ Q8: What would a helpful semester-by-semester planner need to show you?
 
 ## Hypothesis 4: Students want a requirement-matching and prerequisite-checking tool
 
+**RELATED LEARNING CARD**
+
+See: [Hypothesis 4 learning card](./mvp_learning_card.md#hypothesis-4-students-want-a-requirement-matching-and-prerequisite-checking-tool)
+
 **HYPOTHESIS**
 
 We believe that:
@@ -117,6 +133,10 @@ Q9: Tell me about a time when you had to check whether a course fit your degree 
 Q10: What would make it easier for you to confirm that a course fits your program requirements?
 
 ## Hypothesis 5: Students want course recommendations or peer feedback to help them choose
+
+**RELATED LEARNING CARD**
+
+See: [Hypothesis 5 learning card](./mvp_learning_card.md#hypothesis-5-students-want-course-recommendations-or-peer-feedback-to-help-them-choose)
 
 **HYPOTHESIS**
 
