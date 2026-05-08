@@ -39,8 +39,7 @@ Customer Segments (Updated)
 - Students faced with a large number of course options who experience decision fatigue due to limited visibility into workload, difficulty, assessment style, relevance, and comparative course quality.
 **Exchange or visiting students**
 - Students requiring alignment between UQ course offerings and external institutional requirements, who face uncertainty around credit transfer, equivalency, and valid course selection.
-**Course instructors and lecturers**
-Academic staff who experience repeated student enquiries caused by unclear communication of course prerequisites, assessment structures, workload expectations, and course progression relevance.
+
 ## Value Propositions
 **Guided course planning for first-year and early-degree students**
 - Simplifies degree requirements and progression by providing clear, step-by-step planning support and next-step recommendations.
@@ -245,47 +244,8 @@ Academic staff who experience repeated student enquiries caused by unclear commu
 - Reduces approval-cycle revisions by pre-validating course matching assumptions.
 - Gives exchange students a smoother, lower-stress planning experience.
 
-## 5.Course Instructors
 
-### Customer Profile
-
-#### Customer Jobs
-- Provide clear and well-structured course information such as learning outcomes, assessment structure, and prerequisites.
-- Communicate course expectations and workload effectively to students before the semester begins.
-- Manage course feedback and continuously improve course quality.
-
-#### Pains
-- Course information is often distributed across multiple systems and difficult to present clearly.
-- Students frequently misunderstand course workload or assessment expectations.
-- Instructors receive repeated questions about prerequisites, assessment formats, or course difficulty.
-- It is difficult to communicate course updates or assessment changes efficiently to prospective students.
-
-#### Gains
-- A clearer platform to present course information and expectations.
-- Reduced repetitive questions from students about course details.
-- Better alignment between student expectations and course design.
-- Improved student satisfaction and engagement with the course.
-
-### Value Map
-
-#### Products / Services
-- A course information dashboard where instructors can present course structure, assessment details, and prerequisites clearly.
-- Tools to highlight updates such as assessment changes or syllabus adjustments across semesters.
-- A platform for collecting and displaying structured student feedback and insights.
-
-#### Pain Relievers
-- Centralizes course information so instructors do not need to update multiple platforms separately.
-- Reduces confusion about assessment structures or prerequisites.
-- Minimizes repeated clarification emails or questions from students.
-
-#### Gain Creators
-Helps instructors communicate course design more effectively.
-Improves transparency of course expectations for students.
-Encourages better feedback loops between students and instructors.
-
-
-
-## 6. Students relying on peer feedback
+## 5. Students relying on peer feedback
 
 ### Customer Profile
 
