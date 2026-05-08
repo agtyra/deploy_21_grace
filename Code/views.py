@@ -9,3 +9,7 @@ def course_summary(request, course_code=None):
 
 def course_planner(request):
     return render(request, "course_planner.html",)
+
+def course_compare(request, course_code1=None, course_code2=None):
+    context = {'course_code1': course_code1, 'course_code2' : course_code2}
+    return render(request, "course_compare.html", context)
