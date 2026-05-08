@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduPortal - Semester Planner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "surface-container-high": "#e7e8e9",
+                  "outline-variant": "#c6c5d4",
+                  "outline": "#767683",
+                  "secondary-fixed-dim": "#76d6d5",
+                  "on-tertiary-container": "#c19000",
+                  "on-secondary-fixed": "#002020",
+                  "secondary-fixed": "#93f2f2",
+                  "primary-fixed-dim": "#bdc2ff",
+                  "on-surface": "#191c1d",
+                  "on-primary-fixed": "#000767",
+                  "on-secondary": "#ffffff",
+                  "tertiary-fixed-dim": "#fbbc00",
+                  "error": "#ba1a1a",
+                  "on-tertiary-fixed-variant": "#5c4300",
+                  "on-background": "#191c1d",
+                  "tertiary": "#251900",
+                  "surface-container": "#edeeef",
+                  "on-primary-fixed-variant": "#343d96",
+                  "tertiary-fixed": "#ffdfa0",
+                  "surface": "#f8f9fa",
+                  "primary-container": "#1a237e",
+                  "background": "#f8f9fa",
+                  "on-secondary-container": "#006e6e",
+                  "on-tertiary": "#ffffff",
+                  "surface-tint": "#4c56af",
+                  "surface-container-highest": "#e1e3e4",
+                  "secondary": "#006a6a",
+                  "on-error-container": "#93000a",
+                  "secondary-container": "#90efef",
+                  "primary": "#000666",
+                  "on-surface-variant": "#454652",
+                  "inverse-on-surface": "#f0f1f2",
+                  "tertiary-container": "#3f2d00",
+                  "surface-variant": "#e1e3e4",
+                  "surface-container-low": "#f3f4f5",
+                  "inverse-primary": "#bdc2ff",
+                  "surface-dim": "#d9dadb",
+                  "error-container": "#ffdad6",
+                  "surface-bright": "#f8f9fa",
+                  "surface-container-lowest": "#ffffff",
+                  "on-error": "#ffffff",
+                  "on-primary-container": "#8690ee",
+                  "on-primary": "#ffffff",
+                  "primary-fixed": "#e0e0ff",
+                  "inverse-surface": "#2e3132",
+                  "on-secondary-fixed-variant": "#004f4f",
+                  "on-tertiary-fixed": "#261a00"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "xs": "0.5rem",
+                  "max_width": "1280px",
+                  "md": "1rem",
+                  "sm": "0.75rem",
+                  "lg": "1.5rem",
+                  "margin": "2rem",
+                  "base": "4px",
+                  "gutter": "1.5rem",
+                  "xl": "2.5rem"
+          },
+          "fontFamily": {
+                  "h2": ["Inter"],
+                  "body-sm": ["Inter"],
+                  "label-md": ["Inter"],
+                  "body-lg": ["Inter"],
+                  "h1": ["Inter"],
+                  "label-sm": ["Inter"],
+                  "h3": ["Inter"],
+                  "body-md": ["Inter"]
+          },
+          "fontSize": {
+                  "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                  "body-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                  "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                  "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                  "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                  "h3": ["20px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                  "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}]
+          }
+        }
+      }
+    }
+</script>
+<style>
+    body { margin: 0; padding: 0; overflow: hidden; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .icon-fill { font-variation-settings: 'FILL' 1; }
+
+    .canvas-scroll::-webkit-scrollbar { width: 8px; }
+    .canvas-scroll::-webkit-scrollbar-track { background: transparent; }
+    .canvas-scroll::-webkit-scrollbar-thumb { background-color: #d9dadb; border-radius: 20px; }
+
+    .semester-col::-webkit-scrollbar { width: 4px; }
+    .semester-col::-webkit-scrollbar-track { background: transparent; }
+    .semester-col::-webkit-scrollbar-thumb { background-color: #d9dadb; border-radius: 20px; }
+
+    .course-card { cursor: grab; }
+    .course-card:active { cursor: grabbing; }
+    .course-card.dragging { opacity: 0.5; transform: rotate(2deg); }
+    .drop-zone.drag-over { background-color: #e0e0ff; border: 2px dashed #4c56af; }
+    .semester-column.drag-over-col { box-shadow: 0 0 0 2px #4c56af; }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md flex h-screen antialiased">
+
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-slate-900 shadow-sm z-50 hidden md:block">
+  <div class="flex flex-col h-full py-6">
+    <!-- Header -->
+    <div class="px-6 mb-8 flex items-center gap-sm">
+      <div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shrink-0">
+        <span class="material-symbols-outlined icon-fill">school</span>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold text-indigo-900 dark:text-white leading-tight">EduPortal</h1>
+        <p class="font-inter text-sm font-medium text-gray-500">Academic Advisor</p>
+      </div>
+    </div>
+    <!-- Navigation Links -->
+    <nav class="flex-1 px-4 space-y-1">
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors active:scale-95 duration-150" href="{% url 'dashboard' %}">
+        <span class="material-symbols-outlined">home</span>
+        <span class="font-inter text-sm font-medium">Home</span>
+      </a>
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors active:scale-95 duration-150" href="#">
+        <span class="material-symbols-outlined">search</span>
+        <span class="font-inter text-sm font-medium">Course Search</span>
+      </a>
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors active:scale-95 duration-150" href="#">
+        <span class="material-symbols-outlined">compare_arrows</span>
+        <span class="font-inter text-sm font-medium">Comparison</span>
+      </a>
+      <!-- Active: Semester Planner -->
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-indigo-700 dark:text-indigo-400 font-semibold border-r-4 border-indigo-700 dark:border-indigo-400 bg-indigo-50 dark:bg-indigo-900/20 active:scale-95 duration-150 transition-colors" href="{% url 'course_planner' %}">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+        <span class="font-inter text-sm font-medium">Semester Planner</span>
+      </a>
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors active:scale-95 duration-150" href="#">
+        <span class="material-symbols-outlined">assignment_turned_in</span>
+        <span class="font-inter text-sm font-medium">Degree Audit</span>
+      </a>
+    </nav>
+  </div>
+</aside>
+
+<!-- Main Content Wrapper -->
+<main class="flex-1 flex flex-col min-w-0 md:ml-64 relative">
+  <!-- TopNavBar -->
+  <header class="fixed top-0 right-0 left-0 md:left-64 h-16 z-40 border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm transition-all duration-200">
+    <div class="flex items-center justify-between px-8 w-full h-full">
+      <!-- Left: Search -->
+      <div class="flex-1 max-w-md hidden md:block">
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-3 text-gray-400">search</span>
+          <input class="w-full bg-surface-container-low border border-transparent focus:border-indigo-500 rounded-lg pl-10 pr-4 py-2 font-inter text-sm text-indigo-900 outline-none transition-all focus:shadow-[0_0_0_3px_rgba(76,86,175,0.1)]" placeholder="Search courses, terms..." type="text" id="searchInput" oninput="filterCourses(this.value)"/>
+        </div>
+      </div>
+      <!-- Mobile Logo -->
+      <div class="md:hidden flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary icon-fill">school</span>
+        <span class="font-bold text-lg text-primary">EduPortal</span>
+      </div>
+      <!-- Right: Actions -->
+      <div class="flex items-center gap-4">
+        <button class="p-2 rounded-full text-gray-500 hover:text-indigo-600 hover:bg-gray-50 transition-colors relative">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span>
+        </button>
+        <button class="p-2 rounded-full text-gray-500 hover:text-indigo-600 hover:bg-gray-50 transition-colors">
+          <span class="material-symbols-outlined">help_outline</span>
+        </button>
+        <div class="h-6 w-px bg-gray-200 mx-2 hidden sm:block"></div>
+        <button class="hidden sm:block font-inter text-sm font-medium text-gray-500 hover:text-indigo-600 transition-colors">Settings</button>
+        <img alt="Student Profile Photo" class="w-8 h-8 rounded-full border border-gray-200 object-cover cursor-pointer hover:ring-2 hover:ring-indigo-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvwxuhntb1zPu-DkW3DndNjMIjbEW3AD-Ek3NBbU4rdynH9lxeQx-X6zibStAx-0b9P1Dofh2i7sjxtsWSLlDrxSybMMtMRCubStjlnBf0f6CyUyOa0Lb2XI34_DdRFf4fivy8MyJ8ND3jrTDT8c0tdtthvq3Usu_sVmhkDku1zQ7y3sr5UDRbgy64Yq-O6LFrxSbzGtWguidgwtxrD0-WJ9b2K91T4exB5ja-a14a1rMbRlXFJogEwXkIu32shNVgkM_-vzm5MEY"/>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scrollable Canvas -->
+  <div class="flex-1 overflow-y-auto mt-16 p-md md:p-lg lg:p-xl canvas-scroll bg-surface">
+    <div class="max-w-[1400px] mx-auto w-full">
+
+      <!-- Page Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-lg">
+        <div>
+          <h2 class="font-h1 text-h1 text-on-surface mb-xs">Bachelor of Computer Science</h2>
+          <div class="flex items-center gap-md text-on-surface-variant font-body-sm text-body-sm">
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[18px]">school</span>
+              <span id="creditsDisplay">144 / 192 Credits Planned</span>
+            </span>
+            <span class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[18px]">schedule</span>
+              <span id="semestersDisplay">3 Semesters Remaining</span>
+            </span>
+          </div>
+        </div>
+        <div class="flex items-center gap-sm">
+          <button onclick="addSemester()" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors shadow-sm active:scale-95">
+            <span class="material-symbols-outlined text-[18px]">add</span>
+            Add Semester
+          </button>
+          <button onclick="savePlan()" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]">
+            <span class="material-symbols-outlined text-[18px]">save</span>
+            Save Plan
+          </button>
+        </div>
+      </div>
+
+      <!-- Planner Grid: Requirements Sidebar + Semester Columns -->
+      <div class="flex gap-lg overflow-x-auto pb-md" id="plannerContainer">
+
+        <!-- Core Requirements Sidebar -->
+        <div class="min-w-[220px] max-w-[220px] shrink-0">
+          <div class="bg-surface-container rounded-xl p-md border border-outline-variant/40">
+            <div class="flex items-center justify-between mb-md">
+              <h3 class="font-h3 text-h3 text-on-surface">Core Requirements</h3>
+              <span class="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full cursor-pointer hover:bg-primary-container transition-colors" onclick="toggleEditMode()">Edit</span>
+            </div>
+
+            <!-- Requirement Cards (draggable) -->
+            <div class="flex flex-col gap-sm" id="requirementsPool">
+
+              <div class="course-card bg-surface-container-lowest rounded-lg p-sm border-l-4 border-primary shadow-sm hover:shadow-md transition-all"
+                   draggable="true"
+                   data-course-id="DATA201"
+                   data-course-name="Database Systems"
+                   data-course-cp="12"
+                   data-course-prereqs=""
+                   data-course-type="core"
+                   ondragstart="handleDragStart(event)"
+                   ondragend="handleDragEnd(event)">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-md text-label-md text-on-surface">DATA201</span>
+                  <span class="material-symbols-outlined text-[16px] text-secondary icon-fill hidden prereq-check">check_circle</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Database Systems</p>
+                <div class="flex items-center gap-xs mt-1">
+                  <span class="font-label-sm text-label-sm text-outline bg-surface-container-high px-1.5 py-0.5 rounded">12 CP</span>
+                </div>
+              </div>
+
+              <div class="course-card bg-surface-container-lowest rounded-lg p-sm border-l-4 border-primary shadow-sm hover:shadow-md transition-all"
+                   draggable="true"
+                   data-course-id="COMP301"
+                   data-course-name="Software Engineering"
+                   data-course-cp="12"
+                   data-course-prereqs="COMP102"
+                   data-course-type="core"
+                   ondragstart="handleDragStart(event)"
+                   ondragend="handleDragEnd(event)">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-md text-label-md text-on-surface">COMP301</span>
+                  <span class="material-symbols-outlined text-[16px] text-secondary icon-fill hidden prereq-check">check_circle</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Software Engineering</p>
+                <div class="flex items-center gap-xs mt-1">
+                  <span class="font-label-sm text-label-sm text-outline bg-surface-container-high px-1.5 py-0.5 rounded">12 CP</span>
+                  <span class="font-label-sm text-label-sm text-error flex items-center gap-0.5">
+                    <span class="material-symbols-outlined text-[14px]">lock</span>
+                    Prereq. Missing
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Semester Columns Container -->
+        <div class="flex gap-lg flex-1 overflow-x-auto" id="semesterColumnsContainer">
+
+          <!-- Semester 1: Completed -->
+          <div class="semester-column min-w-[240px] max-w-[280px] flex-1 bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-[0_2px_8px_rgba(0,7,103,0.04)] flex flex-col"
+               data-semester-id="sem1-2024"
+               data-semester-status="completed">
+            <div class="flex items-center justify-between p-md pb-sm border-b border-surface-container-highest">
+              <div>
+                <h3 class="font-h3 text-h3 text-on-surface">Sem 1 2024</h3>
+                <p class="font-label-sm text-label-sm text-secondary mt-0.5">Completed</p>
+              </div>
+              <div class="relative">
+                <button class="text-outline hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors" onclick="toggleSemesterMenu(this)">
+                  <span class="material-symbols-outlined text-[20px]">more_horiz</span>
+                </button>
+                <div class="semester-menu hidden absolute right-0 top-8 bg-surface-container-lowest rounded-lg shadow-lg border border-outline-variant/40 py-1 z-10 min-w-[140px]">
+                  <button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-2" onclick="clearSemester(this)">
+                    <span class="material-symbols-outlined text-[16px]">delete_sweep</span> Clear All
+                  </button>
+                  <button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-error hover:bg-error-container/30 transition-colors flex items-center gap-2" onclick="removeSemester(this)">
+                    <span class="material-symbols-outlined text-[16px]">delete</span> Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Drop zone for courses -->
+            <div class="flex-1 p-sm flex flex-col gap-sm overflow-y-auto semester-col drop-zone"
+                 ondragover="handleDragOver(event)"
+                 ondragleave="handleDragLeave(event)"
+                 ondrop="handleDrop(event)">
+
+              <!-- Completed course card -->
+              <div class="course-card bg-surface-container-low rounded-lg p-sm border border-outline-variant/30 shadow-sm hover:shadow-md transition-all"
+                   draggable="true"
+                   data-course-id="COMP101"
+                   data-course-name="Intro to Programming"
+                   data-course-cp="12"
+                   data-course-prereqs=""
+                   data-course-type="core"
+                   ondragstart="handleDragStart(event)"
+                   ondragend="handleDragEnd(event)">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="font-label-md text-label-md text-on-surface">COMP101</span>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Intro to Programming</p>
+                  </div>
+                  <span class="material-symbols-outlined text-[20px] text-secondary icon-fill">check_circle</span>
+                </div>
+              </div>
+
+              <div class="course-card bg-surface-container-low rounded-lg p-sm border border-outline-variant/30 shadow-sm hover:shadow-md transition-all"
+                   draggable="true"
+                   data-course-id="MATH101"
+                   data-course-name="Discrete Mathematics"
+                   data-course-cp="12"
+                   data-course-prereqs=""
+                   data-course-type="core"
+                   ondragstart="handleDragStart(event)"
+                   ondragend="handleDragEnd(event)">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="font-label-md text-label-md text-on-surface">MATH101</span>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Discrete Mathematics</p>
+                  </div>
+                  <span class="material-symbols-outlined text-[20px] text-secondary icon-fill">check_circle</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Semester 2: Current (has prerequisite error) -->
+          <div class="semester-column min-w-[240px] max-w-[280px] flex-1 bg-surface-container-lowest rounded-xl border-2 border-primary shadow-[0_2px_8px_rgba(0,7,103,0.08)] flex flex-col"
+               data-semester-id="sem2-2024"
+               data-semester-status="current">
+            <div class="flex items-center justify-between p-md pb-sm border-b border-surface-container-highest">
+              <div>
+                <h3 class="font-h3 text-h3 text-on-surface">Sem 2 2024</h3>
+                <p class="font-label-sm text-label-sm text-primary mt-0.5">Current</p>
+              </div>
+              <div class="relative">
+                <button class="text-outline hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors" onclick="toggleSemesterMenu(this)">
+                  <span class="material-symbols-outlined text-[20px]">more_horiz</span>
+                </button>
+                <div class="semester-menu hidden absolute right-0 top-8 bg-surface-container-lowest rounded-lg shadow-lg border border-outline-variant/40 py-1 z-10 min-w-[140px]">
+                  <button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-2" onclick="clearSemester(this)">
+                    <span class="material-symbols-outlined text-[16px]">delete_sweep</span> Clear All
+                  </button>
+                  <button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-error hover:bg-error-container/30 transition-colors flex items-center gap-2" onclick="removeSemester(this)">
+                    <span class="material-symbols-outlined text-[16px]">delete</span> Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prerequisite Warning Banner -->
+            <div class="mx-sm mt-sm px-3 py-2 bg-error-container rounded-lg flex items-center gap-2 semester-warning" id="sem2-warning">
+              <span class="material-symbols-outlined text-[18px] text-on-error-container icon-fill">error</span>
+              <span class="font-label-sm text-label-sm text-on-error-container">Invalid Plan: Prerequisite missing</span>
+            </div>
+
+            <!-- Drop zone -->
+            <div class="flex-1 p-sm flex flex-col gap-sm overflow-y-auto semester-col drop-zone"
+                 ondragover="handleDragOver(event)"
+                 ondragleave="handleDragLeave(event)"
+                 ondrop="handleDrop(event)">
+
+              <!-- Course with prerequisite violation -->
+              <div class="course-card bg-surface-container-lowest rounded-lg p-sm border-2 border-error shadow-sm hover:shadow-md transition-all"
+                   draggable="true"
+                   data-course-id="COMP302"
+                   data-course-name="Algorithms &amp; Data Structs"
+                   data-course-cp="12"
+                   data-course-prereqs="COMP102"
+                   data-course-type="core"
+                   ondragstart="handleDragStart(event)"
+                   ondragend="handleDragEnd(event)">
+                <div class="flex items-center gap-1 mb-1">
+                  <span class="font-label-md text-label-md text-error">COMP302</span>
+                  <span class="material-symbols-outlined text-[16px] text-error">warning</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Algorithms &amp; Data Structs</p>
+                <p class="font-label-sm text-label-sm text-error mt-1">Requires: COMP102</p>
+                <div class="flex items-center gap-xs mt-1">
+                  <span class="font-label-sm text-label-sm text-outline bg-surface-container-high px-1.5 py-0.5 rounded">12 CP</span>
+                </div>
+              </div>
+
+              <!-- Normal course -->
+              <div class="course-card bg-surface-container-lowest rounded-lg p-sm border border-outline-variant/30 shadow-sm hover:shadow-md transition-all"
+                   draggable="true"
+                   data-course-id="STAT201"
+                   data-course-name="Statistics for Sciences"
+                   data-course-cp="12"
+                   data-course-prereqs=""
+                   data-course-type="elective"
+                   ondragstart="handleDragStart(event)"
+                   ondragend="handleDragEnd(event)">
+                <div class="flex items-center justify-between">
+                  <span class="font-label-md text-label-md text-on-surface">STAT201</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Statistics for Sciences</p>
+                <div class="flex items-center gap-xs mt-1">
+                  <span class="font-label-sm text-label-sm text-outline bg-surface-container-high px-1.5 py-0.5 rounded">12 CP</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Semester 3: Planned (empty) -->
+          <div class="semester-column min-w-[240px] max-w-[280px] flex-1 bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-[0_2px_8px_rgba(0,7,103,0.04)] flex flex-col"
+               data-semester-id="sem1-2025"
+               data-semester-status="planned">
+            <div class="flex items-center justify-between p-md pb-sm border-b border-surface-container-highest">
+              <div>
+                <h3 class="font-h3 text-h3 text-on-surface">Sem 1 2025</h3>
+                <p class="font-label-sm text-label-sm text-outline mt-0.5">Planned</p>
+              </div>
+              <div class="relative">
+                <button class="text-outline hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors" onclick="toggleSemesterMenu(this)">
+                  <span class="material-symbols-outlined text-[20px]">more_horiz</span>
+                </button>
+                <div class="semester-menu hidden absolute right-0 top-8 bg-surface-container-lowest rounded-lg shadow-lg border border-outline-variant/40 py-1 z-10 min-w-[140px]">
+                  <button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-2" onclick="clearSemester(this)">
+                    <span class="material-symbols-outlined text-[16px]">delete_sweep</span> Clear All
+                  </button>
+                  <button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-error hover:bg-error-container/30 transition-colors flex items-center gap-2" onclick="removeSemester(this)">
+                    <span class="material-symbols-outlined text-[16px]">delete</span> Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Drop zone -->
+            <div class="flex-1 p-sm flex flex-col gap-sm overflow-y-auto semester-col drop-zone min-h-[200px]"
+                 ondragover="handleDragOver(event)"
+                 ondragleave="handleDragLeave(event)"
+                 ondrop="handleDrop(event)">
+              <!-- Empty state placeholder -->
+              <div class="empty-placeholder flex-1 flex flex-col items-center justify-center text-outline py-xl">
+                <span class="material-symbols-outlined text-[32px] mb-2">add_circle_outline</span>
+                <p class="font-body-sm text-body-sm text-center">Drag courses here<br/>to schedule</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- Toast Notification -->
+<div id="toast" class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-lg py-md rounded-xl shadow-lg font-label-md text-label-md flex items-center gap-sm z-50 translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+  <span class="material-symbols-outlined text-[20px]" id="toastIcon">check_circle</span>
+  <span id="toastMessage">Plan saved successfully!</span>
+</div>
+
+<!-- Add Course Modal -->
+<div id="addCourseModal" class="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 hidden items-center justify-center">
+  <div class="bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/40 p-lg w-full max-w-md mx-4">
+    <div class="flex items-center justify-between mb-md">
+      <h3 class="font-h3 text-h3 text-on-surface">Add Course to Plan</h3>
+      <button onclick="closeAddCourseModal()" class="text-outline hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="space-y-md">
+      <div>
+        <label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Course Code</label>
+        <input type="text" id="newCourseCode" placeholder="e.g. COMP3506" class="w-full bg-surface-container-low border border-outline-variant/50 focus:border-primary rounded-lg px-3 py-2 font-body-sm text-body-sm text-on-surface outline-none transition-all focus:shadow-[0_0_0_3px_rgba(76,86,175,0.1)]"/>
+      </div>
+      <div>
+        <label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Course Name</label>
+        <input type="text" id="newCourseName" placeholder="e.g. Algorithms & Data Structures" class="w-full bg-surface-container-low border border-outline-variant/50 focus:border-primary rounded-lg px-3 py-2 font-body-sm text-body-sm text-on-surface outline-none transition-all focus:shadow-[0_0_0_3px_rgba(76,86,175,0.1)]"/>
+      </div>
+      <div>
+        <label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Credit Points</label>
+        <input type="number" id="newCourseCp" value="12" class="w-full bg-surface-container-low border border-outline-variant/50 focus:border-primary rounded-lg px-3 py-2 font-body-sm text-body-sm text-on-surface outline-none transition-all focus:shadow-[0_0_0_3px_rgba(76,86,175,0.1)]"/>
+      </div>
+      <div>
+        <label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Prerequisites (comma-separated codes)</label>
+        <input type="text" id="newCoursePrereqs" placeholder="e.g. COMP101, MATH101" class="w-full bg-surface-container-low border border-outline-variant/50 focus:border-primary rounded-lg px-3 py-2 font-body-sm text-body-sm text-on-surface outline-none transition-all focus:shadow-[0_0_0_3px_rgba(76,86,175,0.1)]"/>
+      </div>
+      <div>
+        <label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Type</label>
+        <select id="newCourseType" class="w-full bg-surface-container-low border border-outline-variant/50 focus:border-primary rounded-lg px-3 py-2 font-body-sm text-body-sm text-on-surface outline-none transition-all">
+          <option value="core">Core</option>
+          <option value="elective">Elective</option>
+        </select>
+      </div>
+      <div>
+        <label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Add to</label>
+        <select id="newCourseTarget" class="w-full bg-surface-container-low border border-outline-variant/50 focus:border-primary rounded-lg px-3 py-2 font-body-sm text-body-sm text-on-surface outline-none transition-all">
+          <option value="pool">Core Requirements Pool</option>
+        </select>
+      </div>
+      <button onclick="addCourseFromModal()" class="w-full bg-primary text-on-primary font-label-md text-label-md py-2.5 rounded-lg hover:bg-primary-container transition-colors shadow-sm active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]">
+        Add Course
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================
+// COURSE PLANNER - JavaScript
+// ============================
+
+// --- Drag and Drop ---
+let draggedElement = null;
+
+function handleDragStart(e) {
+  draggedElement = e.target.closest('.course-card');
+  draggedElement.classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', draggedElement.dataset.courseId);
+
+  // Highlight all valid drop zones
+  document.querySelectorAll('.drop-zone').forEach(zone => {
+    zone.style.minHeight = '60px';
+  });
+}
+
+function handleDragEnd(e) {
+  if (draggedElement) {
+    draggedElement.classList.remove('dragging');
+  }
+  draggedElement = null;
+  document.querySelectorAll('.drop-zone').forEach(zone => {
+    zone.classList.remove('drag-over');
+  });
+  document.querySelectorAll('.semester-column').forEach(col => {
+    col.classList.remove('drag-over-col');
+  });
+}
+
+function handleDragOver(e) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  const dropZone = e.target.closest('.drop-zone');
+  if (dropZone) {
+    dropZone.classList.add('drag-over');
+    const semCol = dropZone.closest('.semester-column');
+    if (semCol) semCol.classList.add('drag-over-col');
+  }
+}
+
+function handleDragLeave(e) {
+  const dropZone = e.target.closest('.drop-zone');
+  if (dropZone && !dropZone.contains(e.relatedTarget)) {
+    dropZone.classList.remove('drag-over');
+    const semCol = dropZone.closest('.semester-column');
+    if (semCol) semCol.classList.remove('drag-over-col');
+  }
+}
+
+function handleDrop(e) {
+  e.preventDefault();
+  const dropZone = e.target.closest('.drop-zone');
+  if (!dropZone || !draggedElement) return;
+
+  dropZone.classList.remove('drag-over');
+  const semCol = dropZone.closest('.semester-column');
+  if (semCol) semCol.classList.remove('drag-over-col');
+
+  // Remove empty placeholder if present
+  const placeholder = dropZone.querySelector('.empty-placeholder');
+  if (placeholder) placeholder.remove();
+
+  // Build a proper semester course card from the dragged element
+  const courseId = draggedElement.dataset.courseId;
+  const courseName = draggedElement.dataset.courseName;
+  const courseCp = draggedElement.dataset.courseCp;
+  const coursePrereqs = draggedElement.dataset.coursePrereqs;
+  const courseType = draggedElement.dataset.courseType;
+
+  // Remove from old location
+  draggedElement.remove();
+
+  // Create new card for semester
+  const card = createSemesterCourseCard(courseId, courseName, courseCp, coursePrereqs, courseType);
+  dropZone.appendChild(card);
+
+  // Re-validate all semesters
+  validateAllPrerequisites();
+  updateCreditsDisplay();
+}
+
+
+// --- Create Course Card for Semester Column ---
+function createSemesterCourseCard(courseId, courseName, courseCp, coursePrereqs, courseType) {
+  const card = document.createElement('div');
+  card.className = 'course-card bg-surface-container-lowest rounded-lg p-sm border border-outline-variant/30 shadow-sm hover:shadow-md transition-all';
+  card.draggable = true;
+  card.dataset.courseId = courseId;
+  card.dataset.courseName = courseName;
+  card.dataset.courseCp = courseCp;
+  card.dataset.coursePrereqs = coursePrereqs || '';
+  card.dataset.courseType = courseType || 'core';
+
+  card.addEventListener('dragstart', handleDragStart);
+  card.addEventListener('dragend', handleDragEnd);
+
+  let prereqHtml = '';
+  if (coursePrereqs) {
+    prereqHtml = `<p class="font-label-sm text-label-sm text-error mt-1 prereq-warning hidden">Requires: ${coursePrereqs}</p>`;
+  }
+
+  card.innerHTML = `
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-1">
+        <span class="font-label-md text-label-md text-on-surface course-code-label">${courseId}</span>
+        <span class="material-symbols-outlined text-[16px] text-error prereq-icon hidden">warning</span>
+      </div>
+      <button class="text-outline hover:text-error p-0.5 rounded transition-colors opacity-0 group-hover:opacity-100" onclick="removeCourseFromSemester(this)" title="Remove course">
+        <span class="material-symbols-outlined text-[16px]">close</span>
+      </button>
+    </div>
+    <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">${courseName}</p>
+    ${prereqHtml}
+    <div class="flex items-center gap-xs mt-1">
+      <span class="font-label-sm text-label-sm text-outline bg-surface-container-high px-1.5 py-0.5 rounded">${courseCp} CP</span>
+    </div>
+  `;
+
+  // Show remove button on hover
+  card.classList.add('group');
+
+  return card;
+}
+
+
+// --- Prerequisite Validation ---
+function validateAllPrerequisites() {
+  const semesterColumns = document.querySelectorAll('.semester-column');
+  const semesterOrder = [];
+
+  // Build ordered list of semesters with their courses
+  semesterColumns.forEach(col => {
+    const semId = col.dataset.semesterId;
+    const status = col.dataset.semesterStatus;
+    const courses = [];
+    col.querySelectorAll('.course-card').forEach(card => {
+      courses.push(card.dataset.courseId);
+    });
+    semesterOrder.push({ id: semId, status: status, courses: courses, element: col });
+  });
+
+  // For each semester, check prerequisites
+  semesterColumns.forEach((col, semIndex) => {
+    let hasViolation = false;
+
+    // Gather all courses completed in PRIOR semesters
+    const completedBefore = new Set();
+    for (let i = 0; i < semIndex; i++) {
+      semesterOrder[i].courses.forEach(c => completedBefore.add(c));
+    }
+
+    // Check each course in this semester
+    col.querySelectorAll('.course-card').forEach(card => {
+      const prereqs = card.dataset.coursePrereqs;
+      if (!prereqs || prereqs.trim() === '') {
+        // No prereqs - clear any error styling
+        card.classList.remove('border-2', 'border-error');
+        if (!card.classList.contains('border')) card.classList.add('border', 'border-outline-variant/30');
+        const icon = card.querySelector('.prereq-icon');
+        if (icon) icon.classList.add('hidden');
+        const warning = card.querySelector('.prereq-warning');
+        if (warning) warning.classList.add('hidden');
+        const codeLabel = card.querySelector('.course-code-label');
+        if (codeLabel) {
+          codeLabel.classList.remove('text-error');
+          codeLabel.classList.add('text-on-surface');
+        }
+        return;
+      }
+
+      const prereqList = prereqs.split(',').map(p => p.trim()).filter(p => p);
+      const missingPrereqs = prereqList.filter(p => !completedBefore.has(p));
+
+      if (missingPrereqs.length > 0) {
+        hasViolation = true;
+        // Apply error styling
+        card.classList.remove('border', 'border-outline-variant/30');
+        card.classList.add('border-2', 'border-error');
+        const icon = card.querySelector('.prereq-icon');
+        if (icon) icon.classList.remove('hidden');
+        const warning = card.querySelector('.prereq-warning');
+        if (warning) {
+          warning.classList.remove('hidden');
+          warning.textContent = 'Requires: ' + missingPrereqs.join(', ');
+        }
+        const codeLabel = card.querySelector('.course-code-label');
+        if (codeLabel) {
+          codeLabel.classList.remove('text-on-surface');
+          codeLabel.classList.add('text-error');
+        }
+      } else {
+        // Prerequisites met
+        card.classList.remove('border-2', 'border-error');
+        if (!card.classList.contains('border')) card.classList.add('border');
+        card.classList.add('border-outline-variant/30');
+        const icon = card.querySelector('.prereq-icon');
+        if (icon) icon.classList.add('hidden');
+        const warning = card.querySelector('.prereq-warning');
+        if (warning) warning.classList.add('hidden');
+        const codeLabel = card.querySelector('.course-code-label');
+        if (codeLabel) {
+          codeLabel.classList.remove('text-error');
+          codeLabel.classList.add('text-on-surface');
+        }
+      }
+    });
+
+    // Show/hide semester warning banner
+    const warningBanner = col.querySelector('.semester-warning');
+    if (hasViolation) {
+      if (!warningBanner) {
+        // Create warning banner
+        const banner = document.createElement('div');
+        banner.className = 'mx-sm mt-sm px-3 py-2 bg-error-container rounded-lg flex items-center gap-2 semester-warning';
+        banner.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] text-on-error-container icon-fill">error</span>
+          <span class="font-label-sm text-label-sm text-on-error-container">Invalid Plan: Prerequisite missing</span>
+        `;
+        const dropZone = col.querySelector('.drop-zone');
+        col.insertBefore(banner, dropZone);
+      }
+    } else {
+      if (warningBanner) warningBanner.remove();
+    }
+  });
+
+  // Also validate requirements pool
+  validateRequirementsPool();
+}
+
+function validateRequirementsPool() {
+  const completedCourses = new Set();
+  document.querySelectorAll('.semester-column').forEach(col => {
+    col.querySelectorAll('.course-card').forEach(card => {
+      completedCourses.add(card.dataset.courseId);
+    });
+  });
+
+  document.querySelectorAll('#requirementsPool .course-card').forEach(card => {
+    const prereqs = card.dataset.coursePrereqs;
+    const prereqLabel = card.querySelector('.text-error');
+    const checkIcon = card.querySelector('.prereq-check');
+
+    if (!prereqs || prereqs.trim() === '') {
+      // No prereqs - show check
+      if (checkIcon) {
+        checkIcon.classList.remove('hidden');
+      }
+      if (prereqLabel) prereqLabel.remove();
+      return;
+    }
+
+    const prereqList = prereqs.split(',').map(p => p.trim()).filter(p => p);
+    const allMet = prereqList.every(p => completedCourses.has(p));
+
+    if (allMet) {
+      if (checkIcon) checkIcon.classList.remove('hidden');
+      if (prereqLabel) prereqLabel.classList.add('hidden');
+    } else {
+      if (checkIcon) checkIcon.classList.add('hidden');
+      if (prereqLabel) prereqLabel.classList.remove('hidden');
+    }
+  });
+}
+
+
+// --- Update Credits Display ---
+function updateCreditsDisplay() {
+  let totalCp = 0;
+  document.querySelectorAll('.semester-column .course-card').forEach(card => {
+    totalCp += parseInt(card.dataset.courseCp) || 0;
+  });
+  // Also count pool courses
+  document.querySelectorAll('#requirementsPool .course-card').forEach(card => {
+    totalCp += parseInt(card.dataset.courseCp) || 0;
+  });
+  document.getElementById('creditsDisplay').textContent = `${totalCp} / 192 Credits Planned`;
+
+  const semCount = document.querySelectorAll('.semester-column[data-semester-status="planned"]').length;
+  document.getElementById('semestersDisplay').textContent = `${semCount} Semester${semCount !== 1 ? 's' : ''} Remaining`;
+}
+
+
+// --- Add Semester ---
+let semesterCounter = 2; // Start from Sem 2 2025
+function addSemester() {
+  semesterCounter++;
+  const year = 2024 + Math.floor(semesterCounter / 2);
+  const sem = (semesterCounter % 2 === 0) ? 1 : 2;
+  const semId = `sem${sem}-${year}`;
+  const semLabel = `Sem ${sem} ${year}`;
+
+  const colHtml = document.createElement('div');
+  colHtml.className = 'semester-column min-w-[240px] max-w-[280px] flex-1 bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-[0_2px_8px_rgba(0,7,103,0.04)] flex flex-col';
+  colHtml.dataset.semesterId = semId;
+  colHtml.dataset.semesterStatus = 'planned';
+
+  colHtml.innerHTML = `
+    <div class="flex items-center justify-between p-md pb-sm border-b border-surface-container-highest">
+      <div>
+        <h3 class="font-h3 text-h3 text-on-surface">${semLabel}</h3>
+        <p class="font-label-sm text-label-sm text-outline mt-0.5">Planned</p>
+      </div>
+      <div class="relative">
+        <button class="text-outline hover:text-on-surface p-1 rounded-full hover:bg-surface-container transition-colors" onclick="toggleSemesterMenu(this)">
+          <span class="material-symbols-outlined text-[20px]">more_horiz</span>
+        </button>
+        <div class="semester-menu hidden absolute right-0 top-8 bg-surface-container-lowest rounded-lg shadow-lg border border-outline-variant/40 py-1 z-10 min-w-[140px]">
+          <button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-2" onclick="clearSemester(this)">
+            <span class="material-symbols-outlined text-[16px]">delete_sweep</span> Clear All
+          </button>
+          <button class="w-full text-left px-3 py-2 font-body-sm text-body-sm text-error hover:bg-error-container/30 transition-colors flex items-center gap-2" onclick="removeSemester(this)">
+            <span class="material-symbols-outlined text-[16px]">delete</span> Remove
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 p-sm flex flex-col gap-sm overflow-y-auto semester-col drop-zone min-h-[200px]"
+         ondragover="handleDragOver(event)"
+         ondragleave="handleDragLeave(event)"
+         ondrop="handleDrop(event)">
+      <div class="empty-placeholder flex-1 flex flex-col items-center justify-center text-outline py-xl">
+        <span class="material-symbols-outlined text-[32px] mb-2">add_circle_outline</span>
+        <p class="font-body-sm text-body-sm text-center">Drag courses here<br/>to schedule</p>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('semesterColumnsContainer').appendChild(colHtml);
+  updateCreditsDisplay();
+  showToast('Semester added!', 'add_circle');
+}
+
+
+// --- Remove / Clear Semester ---
+function removeSemester(btn) {
+  const col = btn.closest('.semester-column');
+  if (!col) return;
+
+  // Move courses back to requirements pool
+  const pool = document.getElementById('requirementsPool');
+  col.querySelectorAll('.course-card').forEach(card => {
+    const poolCard = createPoolCourseCard(
+      card.dataset.courseId,
+      card.dataset.courseName,
+      card.dataset.courseCp,
+      card.dataset.coursePrereqs,
+      card.dataset.courseType
+    );
+    pool.appendChild(poolCard);
+  });
+
+  col.remove();
+  validateAllPrerequisites();
+  updateCreditsDisplay();
+  showToast('Semester removed', 'delete');
+}
+
+function clearSemester(btn) {
+  const col = btn.closest('.semester-column');
+  if (!col) return;
+  const dropZone = col.querySelector('.drop-zone');
+
+  // Move courses back to pool
+  const pool = document.getElementById('requirementsPool');
+  col.querySelectorAll('.course-card').forEach(card => {
+    const poolCard = createPoolCourseCard(
+      card.dataset.courseId,
+      card.dataset.courseName,
+      card.dataset.courseCp,
+      card.dataset.coursePrereqs,
+      card.dataset.courseType
+    );
+    pool.appendChild(poolCard);
+  });
+
+  dropZone.innerHTML = `
+    <div class="empty-placeholder flex-1 flex flex-col items-center justify-center text-outline py-xl">
+      <span class="material-symbols-outlined text-[32px] mb-2">add_circle_outline</span>
+      <p class="font-body-sm text-body-sm text-center">Drag courses here<br/>to schedule</p>
+    </div>
+  `;
+
+  // Close menu
+  const menu = col.querySelector('.semester-menu');
+  if (menu) menu.classList.add('hidden');
+
+  validateAllPrerequisites();
+  updateCreditsDisplay();
+  showToast('Semester cleared', 'delete_sweep');
+}
+
+function removeCourseFromSemester(btn) {
+  const card = btn.closest('.course-card');
+  if (!card) return;
+
+  // Move back to pool
+  const pool = document.getElementById('requirementsPool');
+  const poolCard = createPoolCourseCard(
+    card.dataset.courseId,
+    card.dataset.courseName,
+    card.dataset.courseCp,
+    card.dataset.coursePrereqs,
+    card.dataset.courseType
+  );
+  pool.appendChild(poolCard);
+
+  const dropZone = card.closest('.drop-zone');
+  card.remove();
+
+  // Add placeholder if drop zone is now empty
+  if (dropZone && dropZone.querySelectorAll('.course-card').length === 0) {
+    dropZone.innerHTML = `
+      <div class="empty-placeholder flex-1 flex flex-col items-center justify-center text-outline py-xl">
+        <span class="material-symbols-outlined text-[32px] mb-2">add_circle_outline</span>
+        <p class="font-body-sm text-body-sm text-center">Drag courses here<br/>to schedule</p>
+      </div>
+    `;
+  }
+
+  validateAllPrerequisites();
+  updateCreditsDisplay();
+}
+
+function createPoolCourseCard(courseId, courseName, courseCp, coursePrereqs, courseType) {
+  const card = document.createElement('div');
+  card.className = 'course-card bg-surface-container-lowest rounded-lg p-sm border-l-4 border-primary shadow-sm hover:shadow-md transition-all';
+  card.draggable = true;
+  card.dataset.courseId = courseId;
+  card.dataset.courseName = courseName;
+  card.dataset.courseCp = courseCp;
+  card.dataset.coursePrereqs = coursePrereqs || '';
+  card.dataset.courseType = courseType || 'core';
+
+  card.addEventListener('dragstart', handleDragStart);
+  card.addEventListener('dragend', handleDragEnd);
+
+  let prereqHtml = '';
+  if (coursePrereqs && coursePrereqs.trim() !== '') {
+    prereqHtml = `
+      <span class="font-label-sm text-label-sm text-error flex items-center gap-0.5">
+        <span class="material-symbols-outlined text-[14px]">lock</span>
+        Prereq. Missing
+      </span>
+    `;
+  }
+
+  card.innerHTML = `
+    <div class="flex items-center justify-between">
+      <span class="font-label-md text-label-md text-on-surface">${courseId}</span>
+      <span class="material-symbols-outlined text-[16px] text-secondary icon-fill hidden prereq-check">check_circle</span>
+    </div>
+    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">${courseName}</p>
+    <div class="flex items-center gap-xs mt-1">
+      <span class="font-label-sm text-label-sm text-outline bg-surface-container-high px-1.5 py-0.5 rounded">${courseCp} CP</span>
+      ${prereqHtml}
+    </div>
+  `;
+
+  return card;
+}
+
+
+// --- Semester Menu Toggle ---
+function toggleSemesterMenu(btn) {
+  // Close all other menus first
+  document.querySelectorAll('.semester-menu').forEach(m => {
+    if (m !== btn.nextElementSibling) m.classList.add('hidden');
+  });
+  const menu = btn.parentElement.querySelector('.semester-menu');
+  menu.classList.toggle('hidden');
+}
+
+// Close menus on outside click
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.relative')) {
+    document.querySelectorAll('.semester-menu').forEach(m => m.classList.add('hidden'));
+  }
+});
+
+
+// --- Save Plan ---
+function savePlan() {
+  const plan = {};
+  document.querySelectorAll('.semester-column').forEach(col => {
+    const semId = col.dataset.semesterId;
+    const courses = [];
+    col.querySelectorAll('.course-card').forEach(card => {
+      courses.push({
+        id: card.dataset.courseId,
+        name: card.dataset.courseName,
+        cp: card.dataset.courseCp,
+        prereqs: card.dataset.coursePrereqs,
+        type: card.dataset.courseType
+      });
+    });
+    plan[semId] = { status: col.dataset.semesterStatus, courses: courses };
+  });
+
+  // Save pool courses too
+  const poolCourses = [];
+  document.querySelectorAll('#requirementsPool .course-card').forEach(card => {
+    poolCourses.push({
+      id: card.dataset.courseId,
+      name: card.dataset.courseName,
+      cp: card.dataset.courseCp,
+      prereqs: card.dataset.coursePrereqs,
+      type: card.dataset.courseType
+    });
+  });
+  plan['_pool'] = poolCourses;
+
+  // Store in localStorage (or could POST to Django backend)
+  localStorage.setItem('coursePlan', JSON.stringify(plan));
+
+  // Check for prerequisite violations
+  const hasViolations = document.querySelectorAll('.semester-warning').length > 0;
+  if (hasViolations) {
+    showToast('Plan saved with warnings! Fix prerequisite issues.', 'warning', true);
+  } else {
+    showToast('Plan saved successfully!', 'check_circle');
+  }
+}
+
+
+// --- Toast Notification ---
+function showToast(message, icon = 'check_circle', isWarning = false) {
+  const toast = document.getElementById('toast');
+  const toastMsg = document.getElementById('toastMessage');
+  const toastIcon = document.getElementById('toastIcon');
+
+  toastMsg.textContent = message;
+  toastIcon.textContent = icon;
+
+  if (isWarning) {
+    toast.classList.remove('bg-inverse-surface');
+    toast.classList.add('bg-tertiary-container');
+    toast.classList.remove('text-inverse-on-surface');
+    toast.classList.add('text-on-tertiary-container');
+  } else {
+    toast.classList.add('bg-inverse-surface');
+    toast.classList.remove('bg-tertiary-container');
+    toast.classList.add('text-inverse-on-surface');
+    toast.classList.remove('text-on-tertiary-container');
+  }
+
+  toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+  toast.classList.add('translate-y-0', 'opacity-100');
+
+  setTimeout(() => {
+    toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+  }, 3000);
+}
+
+
+// --- Add Course Modal ---
+function openAddCourseModal() {
+  const modal = document.getElementById('addCourseModal');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+
+  // Populate semester options
+  const select = document.getElementById('newCourseTarget');
+  select.innerHTML = '<option value="pool">Core Requirements Pool</option>';
+  document.querySelectorAll('.semester-column').forEach(col => {
+    const option = document.createElement('option');
+    option.value = col.dataset.semesterId;
+    option.textContent = col.querySelector('h3').textContent;
+    select.appendChild(option);
+  });
+}
+
+function closeAddCourseModal() {
+  const modal = document.getElementById('addCourseModal');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+}
+
+function addCourseFromModal() {
+  const code = document.getElementById('newCourseCode').value.trim().toUpperCase();
+  const name = document.getElementById('newCourseName').value.trim();
+  const cp = document.getElementById('newCourseCp').value.trim();
+  const prereqs = document.getElementById('newCoursePrereqs').value.trim();
+  const type = document.getElementById('newCourseType').value;
+  const target = document.getElementById('newCourseTarget').value;
+
+  if (!code || !name) {
+    showToast('Please fill in course code and name', 'error', true);
+    return;
+  }
+
+  // Check for duplicates
+  const existing = document.querySelector(`[data-course-id="${code}"]`);
+  if (existing) {
+    showToast(`${code} is already in the plan`, 'error', true);
+    return;
+  }
+
+  if (target === 'pool') {
+    const pool = document.getElementById('requirementsPool');
+    const card = createPoolCourseCard(code, name, cp, prereqs, type);
+    pool.appendChild(card);
+  } else {
+    const col = document.querySelector(`[data-semester-id="${target}"]`);
+    if (col) {
+      const dropZone = col.querySelector('.drop-zone');
+      const placeholder = dropZone.querySelector('.empty-placeholder');
+      if (placeholder) placeholder.remove();
+      const card = createSemesterCourseCard(code, name, cp, prereqs, type);
+      dropZone.appendChild(card);
+    }
+  }
+
+  closeAddCourseModal();
+  validateAllPrerequisites();
+  updateCreditsDisplay();
+  showToast(`${code} added to plan!`, 'add_circle');
+
+  // Clear form
+  document.getElementById('newCourseCode').value = '';
+  document.getElementById('newCourseName').value = '';
+  document.getElementById('newCourseCp').value = '12';
+  document.getElementById('newCoursePrereqs').value = '';
+}
+
+
+// --- Edit Mode Toggle ---
+let editMode = false;
+function toggleEditMode() {
+  editMode = !editMode;
+  if (editMode) {
+    openAddCourseModal();
+  }
+}
+
+
+// --- Search / Filter ---
+function filterCourses(query) {
+  const q = query.toLowerCase();
+  document.querySelectorAll('.course-card').forEach(card => {
+    const id = (card.dataset.courseId || '').toLowerCase();
+    const name = (card.dataset.courseName || '').toLowerCase();
+    if (q === '' || id.includes(q) || name.includes(q)) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+
+// --- Initialize ---
+document.addEventListener('DOMContentLoaded', () => {
+  validateAllPrerequisites();
+  updateCreditsDisplay();
+});
+</script>
+
+</body></html>
