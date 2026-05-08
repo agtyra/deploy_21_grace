@@ -8,4 +8,4 @@ def course_summary(request, course_code=None):
     return render(request, "course_summary.html", context)
 
 def course_planner(request):
-    return render(request, "course_planner.html")
+    return render(request, "course_planner.html",)
