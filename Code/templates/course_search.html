@@ -68,15 +68,15 @@ body { margin: 0; overflow: hidden; font-family: Inter, sans-serif; }
         <span class="material-symbols-outlined icon-fill">search</span>
         <span class="text-sm font-medium">Course Search</span>
       </a>
-      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="#">
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="{% url 'dashboard' %}">
         <span class="material-symbols-outlined">compare_arrows</span>
         <span class="text-sm font-medium">Comparison</span>
       </a>
-      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="#">
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="{% url 'course_compare' %}">
         <span class="material-symbols-outlined">calendar_month</span>
         <span class="text-sm font-medium">Semester Planner</span>
       </a>
-      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="#">
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="{% url 'course_planner' %}">
         <span class="material-symbols-outlined">assignment_turned_in</span>
         <span class="text-sm font-medium">Degree Audit</span>
       </a>
@@ -170,7 +170,7 @@ body { margin: 0; overflow: hidden; font-family: Inter, sans-serif; }
           </div>
 
           <div id="course-results" class="grid grid-cols-1 xl:grid-cols-3 gap-5">
-            <a href="#" data-rating="1.0" data-workload="medium" data-relevance="core" data-assessment="project" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-indigo-300 hover:shadow-md transition-all">
+            <a href="{% url 'course_summary' course_code='CSSE1001' %}" data-rating="1.0" data-workload="medium" data-relevance="core" data-assessment="project" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-indigo-300 hover:shadow-md transition-all">
               <div class="flex items-start justify-between gap-4">
                 <span class="rounded-md bg-indigo-100 px-3 py-1 text-xs font-bold text-indigo-900">CSSE1001</span>
                 <span class="flex items-center gap-1 text-sm font-semibold text-on-surface"><span class="material-symbols-outlined icon-fill text-amber-400 text-[18px]">star</span>1.0</span>
@@ -184,7 +184,7 @@ body { margin: 0; overflow: hidden; font-family: Inter, sans-serif; }
               </div>
             </a>
 
-            <a href="#" data-rating="4.8" data-workload="low" data-relevance="elective" data-assessment="project" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-amber-300 hover:shadow-md transition-all">
+            <a href="{% url 'course_summary' course_code='DESN2000' %}" data-rating="4.8" data-workload="low" data-relevance="elective" data-assessment="project" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-amber-300 hover:shadow-md transition-all">
               <div class="flex items-start justify-between gap-4">
                 <span class="rounded-md bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700">DECO1100</span>
                 <span class="flex items-center gap-1 text-sm font-semibold text-on-surface"><span class="material-symbols-outlined icon-fill text-amber-400 text-[18px]">star</span>4.8</span>
@@ -198,7 +198,7 @@ body { margin: 0; overflow: hidden; font-family: Inter, sans-serif; }
               </div>
             </a>
 
-            <a href="#" data-rating="3.5" data-workload="high" data-relevance="core" data-assessment="exam" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-red-300 hover:shadow-md transition-all">
+            <a href="{% url 'course_summary' course_code='MATH1051' %}" data-rating="3.5" data-workload="high" data-relevance="core" data-assessment="exam" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-red-300 hover:shadow-md transition-all">
               <div class="flex items-start justify-between gap-4">
                 <span class="rounded-md bg-red-100 px-3 py-1 text-xs font-bold text-red-700">MATH1051</span>
                 <span class="flex items-center gap-1 text-sm font-semibold text-on-surface"><span class="material-symbols-outlined icon-fill text-amber-400 text-[18px]">star</span>3.5</span>

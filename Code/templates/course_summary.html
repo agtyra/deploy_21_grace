@@ -134,21 +134,21 @@
 </li>
 <!-- Course Search (Active - Semantic Match for Course Details) -->
 <li>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-indigo-700 dark:text-indigo-400 font-semibold border-r-4 border-indigo-700 dark:border-indigo-400 bg-indigo-50 dark:bg-indigo-900/20 active:scale-95 duration-150 transition-colors" href="#">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-indigo-700 dark:text-indigo-400 font-semibold border-r-4 border-indigo-700 dark:border-indigo-400 bg-indigo-50 dark:bg-indigo-900/20 active:scale-95 duration-150 transition-colors" href="{% url 'course_search' %}">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
 <span>Course Search</span>
 </a>
 </li>
 <!-- Comparison (Inactive) -->
 <li>
-<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-150 active:scale-95" href="#">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-150 active:scale-95" href="{% url 'course_compare' %}">
 <span class="material-symbols-outlined">compare_arrows</span>
 <span class="font-label-md text-label-md">Comparison</span>
 </a>
 </li>
 <!-- Semester Planner (Inactive) -->
 <li>
-<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-150 active:scale-95" href="#">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-150 active:scale-95" href="{% url 'course_planner' %}">
 <span class="material-symbols-outlined">calendar_month</span>
 <span class="font-label-md text-label-md">Semester Planner</span>
 </a>
