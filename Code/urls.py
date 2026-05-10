@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import dashboard, course_summary, course_planner, course_compare
+from .views import dashboard, course_summary, course_planner, course_compare, course_search
 
 urlpatterns = [
     path("admin/", admin.site.urls),
