@@ -13,3 +13,6 @@ def course_planner(request):
 def course_compare(request, course_code1=None, course_code2=None):
     context = {'course_code1': course_code1, 'course_code2' : course_code2}
     return render(request, "course_compare.html", context)
+
+def course_search(request):
+    return render(request, "course_search.html")
