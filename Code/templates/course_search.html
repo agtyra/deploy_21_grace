@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Course Search - EduPortal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "#f8f9fa",
+        surface: "#f8f9fa",
+        "surface-container-lowest": "#ffffff",
+        "surface-container-low": "#f3f4f5",
+        "surface-container": "#edeeef",
+        "surface-container-high": "#e7e8e9",
+        "outline-variant": "#c6c5d4",
+        outline: "#767683",
+        primary: "#000666",
+        "primary-container": "#1a237e",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#8690ee",
+        "on-surface": "#191c1d",
+        "on-surface-variant": "#454652",
+        error: "#ba1a1a",
+        "tertiary-fixed-dim": "#fbbc00"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      fontFamily: { inter: ["Inter", "sans-serif"] }
+    }
+  }
+}
+</script>
+<style>
+body { margin: 0; overflow: hidden; font-family: Inter, sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.icon-fill { font-variation-settings: 'FILL' 1; }
+.canvas-scroll::-webkit-scrollbar { width: 8px; }
+.canvas-scroll::-webkit-scrollbar-track { background: transparent; }
+.canvas-scroll::-webkit-scrollbar-thumb { background-color: #d9dadb; border-radius: 20px; }
+</style>
+</head>
+<body class="bg-background text-on-surface flex h-screen antialiased">
+<aside class="fixed left-0 top-0 h-full w-64 border-r border-gray-200 bg-white shadow-sm z-50 hidden md:block">
+  <div class="flex flex-col h-full py-6">
+    <div class="px-6 mb-8 flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shrink-0">
+        <span class="material-symbols-outlined icon-fill">school</span>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold text-indigo-900 leading-tight">EduPortal</h1>
+        <p class="text-sm font-medium text-gray-500">Academic Advisor</p>
+      </div>
+    </div>
+    <nav class="flex-1 px-4 space-y-1">
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="{% url 'dashboard' %}">
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-sm font-medium">Home</span>
+      </a>
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-indigo-700 font-semibold border-r-4 border-indigo-700 bg-indigo-50 active:scale-95 duration-150 transition-colors" href="{% url 'course_search' %}">
+        <span class="material-symbols-outlined icon-fill">search</span>
+        <span class="text-sm font-medium">Course Search</span>
+      </a>
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="#">
+        <span class="material-symbols-outlined">compare_arrows</span>
+        <span class="text-sm font-medium">Comparison</span>
+      </a>
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="#">
+        <span class="material-symbols-outlined">calendar_month</span>
+        <span class="text-sm font-medium">Semester Planner</span>
+      </a>
+      <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-gray-50 transition-colors active:scale-95 duration-150" href="#">
+        <span class="material-symbols-outlined">assignment_turned_in</span>
+        <span class="text-sm font-medium">Degree Audit</span>
+      </a>
+    </nav>
+  </div>
+</aside>
+
+<main class="flex-1 flex flex-col min-w-0 md:ml-64">
+  <header class="fixed top-0 right-0 left-0 md:left-64 h-16 z-40 border-b border-gray-200 bg-white/80 backdrop-blur-md shadow-sm">
+    <div class="flex items-center justify-between px-8 w-full h-full">
+      <div class="flex-1 max-w-md hidden md:block">
+        <div class="relative flex items-center">
+          <span class="material-symbols-outlined absolute left-3 text-gray-400">search</span>
+          <input class="w-full bg-surface-container-low border border-outline-variant rounded-full pl-10 pr-4 py-2 text-sm text-indigo-900 outline-none transition-all focus:border-indigo-500 focus:shadow-[0_0_0_3px_rgba(76,86,175,0.1)]" placeholder="Quick find..." type="text"/>
+        </div>
+      </div>
+      <div class="md:hidden flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary icon-fill">school</span>
+        <span class="font-bold text-lg text-primary">EduPortal</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="p-2 rounded-full text-gray-500 hover:text-indigo-600 hover:bg-gray-50 transition-colors">
+          <span class="material-symbols-outlined">notifications</span>
+        </button>
+        <button class="p-2 rounded-full text-gray-500 hover:text-indigo-600 hover:bg-gray-50 transition-colors">
+          <span class="material-symbols-outlined">help_outline</span>
+        </button>
+        <div class="h-6 w-px bg-gray-200 mx-2 hidden sm:block"></div>
+        <button class="hidden sm:block text-sm font-medium text-gray-500 hover:text-indigo-600 transition-colors">Settings</button>
+        <img alt="Student Profile Photo" class="w-8 h-8 rounded-full border border-gray-200 object-cover cursor-pointer hover:ring-2 hover:ring-indigo-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvwxuhntb1zPu-DkW3DndNjMIjbEW3AD-Ek3NBbU4rdynH9lxeQx-X6zibStAx-0b9P1Dofh2i7sjxtsWSLlDrxSybMMtMRCubStjlnBf0f6CyUyOa0Lb2XI34_DdRFf4fivy8MyJ8ND3jrTDT8c0tdtthvq3Usu_sVmhkDku1zQ7y3sr5UDRbgy64Yq-O6LFrxSbzGtWguidgwtxrD0-WJ9b2K91T4exB5ja-a14a1rMbRlXFJogEwXkIu32shNVgkM_-vzm5MEY"/>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex-1 overflow-y-auto mt-16 bg-surface canvas-scroll">
+    <div class="grid grid-cols-1 lg:grid-cols-[280px_minmax(0,1fr)] min-h-full">
+      <aside class="hidden lg:block border-r border-gray-200 bg-white px-6 py-8">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-xl font-bold text-on-surface">Filters</h2>
+          <button id="clear-filters" class="text-xs font-semibold text-primary hover:underline" type="button">Clear all</button>
+        </div>
+        <div class="space-y-8">
+          <section>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-3">Workload</h3>
+            <div class="flex gap-2">
+              <button class="pill-filter px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium transition-colors" data-filter-group="workload" data-filter-value="medium" type="button">Medium</button>
+              <button class="pill-filter px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium transition-colors" data-filter-group="workload" data-filter-value="low" type="button">Low</button>
+              <button class="pill-filter px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium transition-colors" data-filter-group="workload" data-filter-value="high" type="button">High</button>
+            </div>
+          </section>
+          <section>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-3">Difficulty</h3>
+            <div class="space-y-2 text-sm">
+              <label class="flex items-center justify-between gap-3 text-on-surface-variant cursor-pointer"><span class="flex items-center gap-2"><input class="difficulty-filter rounded border-outline-variant text-primary focus:ring-primary" data-star-bucket="1" type="checkbox"/> <span class="text-amber-400">★</span><span class="text-gray-300">★★★★</span></span><span class="difficulty-count text-xs" data-star-count="1">0</span></label>
+              <label class="flex items-center justify-between gap-3 text-on-surface-variant cursor-pointer"><span class="flex items-center gap-2"><input class="difficulty-filter rounded border-outline-variant text-primary focus:ring-primary" data-star-bucket="2" type="checkbox"/> <span class="text-amber-400">★★</span><span class="text-gray-300">★★★</span></span><span class="difficulty-count text-xs" data-star-count="2">0</span></label>
+              <label class="flex items-center justify-between gap-3 text-on-surface-variant cursor-pointer"><span class="flex items-center gap-2"><input class="difficulty-filter rounded border-outline-variant text-primary focus:ring-primary" data-star-bucket="3" type="checkbox"/> <span class="text-amber-400">★★★</span><span class="text-gray-300">★★</span></span><span class="difficulty-count text-xs" data-star-count="3">0</span></label>
+              <label class="flex items-center justify-between gap-3 text-on-surface-variant cursor-pointer"><span class="flex items-center gap-2"><input class="difficulty-filter rounded border-outline-variant text-primary focus:ring-primary" data-star-bucket="4" type="checkbox"/> <span class="text-amber-400">★★★★</span><span class="text-gray-300">★</span></span><span class="difficulty-count text-xs" data-star-count="4">0</span></label>
+              <label class="flex items-center justify-between gap-3 text-on-surface-variant cursor-pointer"><span class="flex items-center gap-2"><input class="difficulty-filter rounded border-outline-variant text-primary focus:ring-primary" data-star-bucket="5" type="checkbox"/> <span class="text-amber-400">★★★★★</span></span><span class="difficulty-count text-xs" data-star-count="5">0</span></label>
+            </div>
+          </section>
+          <section>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-3">Assessment Type</h3>
+            <div class="space-y-3 text-sm text-on-surface">
+              <label class="flex items-center gap-2 cursor-pointer"><input class="assessment-filter rounded border-outline-variant text-primary focus:ring-primary" data-assessment="exam" type="checkbox"/> Exam Heavy</label>
+              <label class="flex items-center gap-2 cursor-pointer"><input class="assessment-filter rounded border-outline-variant text-primary focus:ring-primary" data-assessment="project" type="checkbox"/> Project Based</label>
+              <label class="flex items-center gap-2 cursor-pointer"><input class="assessment-filter rounded border-outline-variant text-primary focus:ring-primary" data-assessment="essay" type="checkbox"/> Essay Required</label>
+            </div>
+          </section>
+          <section>
+            <h3 class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-3">Relevance</h3>
+            <div class="flex gap-2">
+              <button class="pill-filter px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium transition-colors" data-filter-group="relevance" data-filter-value="core" type="button">Major Core</button>
+              <button class="pill-filter px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium transition-colors" data-filter-group="relevance" data-filter-value="elective" type="button">Elective</button>
+            </div>
+          </section>
+        </div>
+      </aside>
+
+      <section class="px-6 md:px-10 py-8">
+        <div class="max-w-[1520px]">
+          <div class="max-w-3xl mb-6">
+            <h1 class="text-3xl font-bold text-on-surface">Discover Courses</h1>
+            <p id="result-summary" class="mt-1 text-base text-on-surface-variant">Showing 124 results based on your preferences</p>
+            <form class="mt-5 flex w-full overflow-hidden rounded-lg border border-outline-variant bg-white shadow-sm">
+              <div class="relative flex-1">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-[20px]">search</span>
+                <input class="h-12 w-full border-0 pl-12 pr-4 text-sm focus:ring-0" placeholder="Search by course code, name, or keywords..." type="search"/>
+              </div>
+              <button class="w-28 bg-primary text-white text-sm font-semibold hover:bg-indigo-900 transition-colors" type="submit">Search</button>
+            </form>
+          </div>
+
+          <div id="course-results" class="grid grid-cols-1 xl:grid-cols-3 gap-5">
+            <a href="#" data-rating="1.0" data-workload="medium" data-relevance="core" data-assessment="project" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-indigo-300 hover:shadow-md transition-all">
+              <div class="flex items-start justify-between gap-4">
+                <span class="rounded-md bg-indigo-100 px-3 py-1 text-xs font-bold text-indigo-900">CSSE1001</span>
+                <span class="flex items-center gap-1 text-sm font-semibold text-on-surface"><span class="material-symbols-outlined icon-fill text-amber-400 text-[18px]">star</span>1.0</span>
+              </div>
+              <h2 class="mt-4 text-xl font-bold text-on-surface">Software Engineering Introduction</h2>
+              <p class="mt-3 min-h-[48px] text-sm leading-6 text-on-surface-variant">An introduction to software engineering principles, basic programming constructs, and foundational problem-solving techniques.</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Project Heavy</span>
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Low Difficulty</span>
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Major Core</span>
+              </div>
+            </a>
+
+            <a href="#" data-rating="4.8" data-workload="low" data-relevance="elective" data-assessment="project" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-amber-300 hover:shadow-md transition-all">
+              <div class="flex items-start justify-between gap-4">
+                <span class="rounded-md bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700">DECO1100</span>
+                <span class="flex items-center gap-1 text-sm font-semibold text-on-surface"><span class="material-symbols-outlined icon-fill text-amber-400 text-[18px]">star</span>4.8</span>
+              </div>
+              <h2 class="mt-4 text-xl font-bold text-on-surface">Design Thinking &amp; Prototyping</h2>
+              <p class="mt-3 min-h-[48px] text-sm leading-6 text-on-surface-variant">Explore human-centred design methodologies, physical and digital prototyping, and iterative user testing processes.</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Project Based</span>
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Low Workload</span>
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Elective</span>
+              </div>
+            </a>
+
+            <a href="#" data-rating="3.5" data-workload="high" data-relevance="core" data-assessment="exam" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-red-300 hover:shadow-md transition-all">
+              <div class="flex items-start justify-between gap-4">
+                <span class="rounded-md bg-red-100 px-3 py-1 text-xs font-bold text-red-700">MATH1051</span>
+                <span class="flex items-center gap-1 text-sm font-semibold text-on-surface"><span class="material-symbols-outlined icon-fill text-amber-400 text-[18px]">star</span>3.5</span>
+              </div>
+              <h2 class="mt-4 text-xl font-bold text-on-surface">Calculus &amp; Linear Algebra I</h2>
+              <p class="mt-3 min-h-[48px] text-sm leading-6 text-on-surface-variant">Foundations of single-variable calculus, differential equations, and introductory matrix algebra for engineering applications.</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Exam Heavy</span>
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">High Difficulty</span>
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Major Core</span>
+              </div>
+            </a>
+
+            <a href="{% url 'course_summary' course_code='COMP3506' %}" data-rating="4.5" data-workload="high" data-relevance="core" data-assessment="exam" class="course-card block bg-white rounded-lg border border-gray-200 shadow-sm p-6 hover:border-indigo-300 hover:shadow-md transition-all xl:col-span-1">
+              <div class="flex items-start justify-between gap-4">
+                <span class="rounded-md bg-indigo-100 px-3 py-1 text-xs font-bold text-indigo-900">COMP3506</span>
+                <span class="flex items-center gap-1 text-sm font-semibold text-on-surface"><span class="material-symbols-outlined icon-fill text-amber-400 text-[18px]">star</span>4.5</span>
+              </div>
+              <h2 class="mt-4 text-xl font-bold text-on-surface">Algorithms &amp; Data Structures</h2>
+              <p class="mt-3 min-h-[48px] text-sm leading-6 text-on-surface-variant">Advanced analysis of algorithmic complexity, tree structures, graph algorithms, and dynamic programming.</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Exam Heavy</span>
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">High Difficulty</span>
+                <span class="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-on-surface-variant">Major Core</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="mt-8 border-t border-dashed border-outline-variant py-8 flex justify-center">
+            <button class="rounded-lg border border-outline-variant bg-white px-8 py-2 text-sm font-semibold text-on-surface-variant hover:border-primary hover:text-primary transition-colors">Load More Courses</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+<script>
+const difficultyFilters = document.querySelectorAll(".difficulty-filter");
+const assessmentFilters = document.querySelectorAll(".assessment-filter");
+const pillFilters = document.querySelectorAll(".pill-filter");
+const courseCards = document.querySelectorAll(".course-card");
+const difficultyCounts = document.querySelectorAll(".difficulty-count");
+const resultSummary = document.getElementById("result-summary");
+const clearFiltersButton = document.getElementById("clear-filters");
+const pillActiveClasses = ["bg-primary", "text-white"];
+const pillInactiveClasses = ["bg-surface-container-low", "text-on-surface-variant"];
+
+function getStarBucket(rating) {
+  const value = Number.parseFloat(rating);
+  if (Number.isNaN(value)) return "";
+  if (value >= 5) return "5";
+  if (value >= 4) return "4";
+  if (value >= 3) return "3";
+  if (value >= 2) return "2";
+  if (value >= 1) return "1";
+  return "";
+}
+
+function updateDifficultyCounts() {
+  const counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+
+  courseCards.forEach((card) => {
+    const bucket = getStarBucket(card.dataset.rating);
+    if (bucket) counts[bucket] += 1;
+  });
+
+  difficultyCounts.forEach((count) => {
+    count.textContent = counts[count.dataset.starCount] || 0;
+  });
+}
+
+function getSelectedValues(selector, dataKey) {
+  return Array.from(document.querySelectorAll(selector))
+    .filter((filter) => filter.checked || filter.dataset.active === "true")
+    .map((filter) => filter.dataset[dataKey]);
+}
+
+function updatePillStyles() {
+  pillFilters.forEach((filter) => {
+    const isActive = filter.dataset.active === "true";
+    filter.classList.toggle(pillActiveClasses[0], isActive);
+    filter.classList.toggle(pillActiveClasses[1], isActive);
+    filter.classList.toggle(pillInactiveClasses[0], !isActive);
+    filter.classList.toggle(pillInactiveClasses[1], !isActive);
+    filter.textContent = `${filter.textContent.replace(" x", "")}${isActive ? " x" : ""}`;
+  });
+}
+
+function applyFilters() {
+  const selectedDifficulties = Array.from(difficultyFilters)
+    .filter((filter) => filter.checked)
+    .map((filter) => filter.dataset.starBucket);
+  const selectedAssessments = Array.from(assessmentFilters)
+    .filter((filter) => filter.checked)
+    .map((filter) => filter.dataset.assessment);
+  const selectedWorkloads = getSelectedValues(".pill-filter[data-filter-group='workload']", "filterValue");
+  const selectedRelevance = getSelectedValues(".pill-filter[data-filter-group='relevance']", "filterValue");
+  let visibleCount = 0;
+
+  courseCards.forEach((card) => {
+    const cardStarBucket = getStarBucket(card.dataset.rating);
+    const matchesDifficulty = selectedDifficulties.length === 0 || selectedDifficulties.includes(cardStarBucket);
+    const matchesAssessment = selectedAssessments.length === 0 || selectedAssessments.includes(card.dataset.assessment);
+    const matchesWorkload = selectedWorkloads.length === 0 || selectedWorkloads.includes(card.dataset.workload);
+    const matchesRelevance = selectedRelevance.length === 0 || selectedRelevance.includes(card.dataset.relevance);
+    const shouldShow = matchesDifficulty && matchesAssessment && matchesWorkload && matchesRelevance;
+    card.classList.toggle("hidden", !shouldShow);
+    if (shouldShow) visibleCount += 1;
+  });
+
+  const hasActiveFilters = selectedDifficulties.length > 0 || selectedAssessments.length > 0 || selectedWorkloads.length > 0 || selectedRelevance.length > 0;
+  resultSummary.textContent = !hasActiveFilters
+    ? "Showing 124 results based on your preferences"
+    : `Showing ${visibleCount} result${visibleCount === 1 ? "" : "s"} based on selected filters`;
+}
+
+difficultyFilters.forEach((filter) => {
+  filter.addEventListener("change", applyFilters);
+});
+
+assessmentFilters.forEach((filter) => {
+  filter.addEventListener("change", applyFilters);
+});
+
+pillFilters.forEach((filter) => {
+  filter.addEventListener("click", () => {
+    filter.dataset.active = filter.dataset.active === "true" ? "false" : "true";
+    updatePillStyles();
+    applyFilters();
+  });
+});
+
+clearFiltersButton.addEventListener("click", () => {
+  difficultyFilters.forEach((filter) => {
+    filter.checked = false;
+  });
+  assessmentFilters.forEach((filter) => {
+    filter.checked = false;
+  });
+  pillFilters.forEach((filter) => {
+    filter.dataset.active = "false";
+  });
+  updatePillStyles();
+  applyFilters();
+});
+
+updateDifficultyCounts();
+updatePillStyles();
+applyFilters();
+</script>
+</body>
+</html>
