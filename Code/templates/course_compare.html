@@ -107,6 +107,30 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        #dropdown {
+                position: relative;
+                display: inline-block;
+        }
+        .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+        }
+        .dropdown-content button {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+        }
+        .dropdown-content button:hover {
+                background-color: darkgrey;
+        }
+        .show {
+                display: block;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
@@ -203,16 +227,53 @@
                                 <h2 class="font-h1 text-h1 text-on-surface mb-xs">Course Comparison</h2>
                                 <div class="flex items-center gap-md text-on-surface-variant font-body-sm text-body-sm">
                                 <span class="flex items-center gap-1">
-                                <span id="creditsDisplay">Choose Two Courses to Compare.</span>
                                 </span>       
                         </div>
                 </div>
-        <div class="flex items-center gap-sm">
-          <button onclick="addcourse()" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors shadow-sm active:scale-95">
+        <div class="flex items-center gap-sm" id="dropdown">
+          <button onclick="dropdown()" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors shadow-sm active:scale-95" id="dropbtn">
             <span class="material-symbols-outlined text-[18px]">add</span>
             Add Course
           </button>
+          <div id="mydropdown" class="dropdown-content">
+                <button onclick="addcourse(CSSE1001)">CSSE1001</button>
+                <button onclick="addcourse(MATH1051)">MATH1051</button>
+                <button onclick="addcourse(COMP3506)">COMP3506</button>
+          </div>
         </div>
+        </div>
+        <div class="flex items-center justify-around p-md pb-sm border-b border-surface-container-highest">
+        <div class="flex items-center justify-between p-md pb-sm border-surface-container-highest">
+              <div>
+                <h3 class="font-h3 text-h3 text-on-surface">Course 1</h3>
+                </div>
+        </div>
+        <div class="empty-placeholder"></div>
+        <div class="flex items-center justify-between p-md pb-sm border-surface-container-highest">
+              <div>
+                <h3 class="font-h3 text-h3 text-on-surface">Course 2</h3>
+                </div>
+        </div>
+        <div class="empty-placeholder"></div>
         </div>
 
 </div>
+<script>
+        function dropdown() {
+                document.getElementById('mydropdown').classList.toggle("show");
+        }
+        window.onclick = function(event) {
+                if (!event.target.matches('#dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains('show')) {
+                                        openDropdown.classList.remove('show');
+                                }
+                        }
+                }
+        }
+</script>
+</body>
+</html>
