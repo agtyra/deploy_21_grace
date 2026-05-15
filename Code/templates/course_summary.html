@@ -111,64 +111,7 @@
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
 <!-- SideNavBar (Shared Component) -->
-<nav class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant shadow-sm flex flex-col py-6 z-50">
-<div class="px-6 mb-8 flex items-center gap-sm">
-<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shrink-0" data-alt="University Crest: A minimalist geometric shield logo in deep indigo and white">
-<span class="material-symbols-outlined icon-fill">school</span>
-</div>
-<div>
-<h1 class="text-xl font-bold text-indigo-900 dark:text-white leading-tight">EduPortal</h1>
-<p class="font-inter text-sm font-medium text-gray-500">Academic Advisor</p>
-</div>
-</div>
-<div class="px-md mb-md">
-<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider pl-sm">Academic Advisor</p>
-</div>
-<ul class="flex flex-col gap-base px-sm w-full">
-<!-- Home (Inactive) -->
-<li>
-<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-150 active:scale-95" href="{% url 'dashboard' %}">
-<span class="material-symbols-outlined">home</span>
-<span class="font-label-md text-label-md">Home</span>
-</a>
-</li>
-<!-- Course Search (Active - Semantic Match for Course Details) -->
-<li>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-indigo-700 dark:text-indigo-400 font-semibold border-r-4 border-indigo-700 dark:border-indigo-400 bg-indigo-50 dark:bg-indigo-900/20 active:scale-95 duration-150 transition-colors" href="{% url 'course_search' %}">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
-<span>Course Search</span>
-</a>
-</li>
-<!-- Comparison (Inactive) -->
-<li>
-<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-150 active:scale-95" href="{% url 'course_compare' %}">
-<span class="material-symbols-outlined">compare_arrows</span>
-<span class="font-label-md text-label-md">Comparison</span>
-</a>
-</li>
-<!-- Semester Planner (Inactive) -->
-<li>
-<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-150 active:scale-95" href="{% url 'course_planner' %}">
-<span class="material-symbols-outlined">calendar_month</span>
-<span class="font-label-md text-label-md">Semester Planner</span>
-</a>
-</li>
-<!-- Degree Audit (Inactive) -->
-<li>
-<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-150 active:scale-95" href="#">
-<span class="material-symbols-outlined">assignment_turned_in</span>
-<span class="font-label-md text-label-md">Degree Audit</span>
-</a>
-</li>
-</ul>
-<div class="mt-auto px-lg flex items-center gap-sm pt-lg border-t border-outline-variant/30">
-<img alt="Student Profile Photo" class="w-8 h-8 rounded-full object-cover" data-alt="close up portrait of young professional student in bright library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Lyht4dPHYwnzt7guOnjAqDkZTiObOw5Xh2_g1DrjVAXYYIWz4bzliriCFsSeRNCrF8fp94nAmUl9GAlmtVTIuwSSPok9vzEM7wyRlHXHn4GLTMkGdKcpOCUZNfDaJSFcRguGmkQnUFVahSsdbaLqEzs6XufzmjK4fiIyXFfv3pi0jTMzNO8JTeMI0cvPezpvvyTcFZyRnPLHuZcSaKfoa7_sVqEz_zdbOrXrAE0uD0YOjG4mNZz9BuD3KEqTKOVtNaJpOSkqeaY"/>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-on-surface">Alex Johnson</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">B. Computer Science</span>
-</div>
-</div>
-</nav>
+{% include "partials/side_nav.html" with active_nav="course_search" %}
 <!-- TopNavBar (Shared Component) -->
 <header class="fixed top-0 right-0 left-64 h-16 z-40 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant shadow-sm flex items-center justify-between px-8 transition-all duration-200">
 <!-- Search Bar (on_left) -->
@@ -234,16 +177,7 @@
                 </button>
 </div>
 </div>
-<!-- Notification Banner -->
-<div class="bg-secondary-container/40 border border-secondary text-on-secondary-container rounded-xl p-md flex items-center gap-md mb-xl shadow-sm">
-<div class="bg-secondary rounded-full p-xs flex items-center justify-center">
-<span class="material-symbols-outlined text-on-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-</div>
-<div>
-<h3 class="font-label-md text-label-md font-bold">Fits in your plan</h3>
-<p class="font-body-sm text-body-sm opacity-90 mt-0.5">This course fulfills a core requirement for your Major in Software Engineering.</p>
-</div>
-</div>
+
 <!-- Bento Grid Layout -->
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
 <!-- Left Column: Summary & Details (Spans 2 columns) -->
@@ -322,7 +256,10 @@
 <section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-lg">
 <div class="flex items-center justify-between mb-md">
 <h2 class="font-h3 text-h3 text-on-surface">Peer Feedback</h2>
-<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">View all</a>
+<div class="flex items-center gap-sm">
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="{% url 'peer_review' %}">View all</a>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="{% url 'add_review' %}">Write review</a>
+</div>
 </div>
 <!-- Rating Header -->
 <div class="flex items-center gap-md mb-lg bg-surface-container p-md rounded-lg">
@@ -375,9 +312,9 @@
                             </a>
 </li>
 <li>
-<a class="flex items-center gap-sm text-on-surface hover:text-primary transition-colors font-body-sm text-body-sm py-xs" href="#">
-<span class="material-symbols-outlined text-outline-variant text-[20px]">forum</span>
-                                Course Discussion Forum
+<a class="flex items-center gap-sm text-on-surface hover:text-primary transition-colors font-body-sm text-body-sm py-xs" href="{% url 'add_review' %}">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">rate_review</span>
+                                Write a Review
                             </a>
 </li>
 <li>
