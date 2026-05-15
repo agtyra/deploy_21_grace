@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peer Reviews - COMP3506</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#e7e8e9",
+                      "outline-variant": "#c6c5d4",
+                      "outline": "#767683",
+                      "secondary-fixed-dim": "#76d6d5",
+                      "on-tertiary-container": "#c19000",
+                      "on-secondary-fixed": "#002020",
+                      "secondary-fixed": "#93f2f2",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "on-surface": "#191c1d",
+                      "on-primary-fixed": "#000767",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#fbbc00",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed-variant": "#5c4300",
+                      "on-background": "#191c1d",
+                      "tertiary": "#251900",
+                      "surface-container": "#edeeef",
+                      "on-primary-fixed-variant": "#343d96",
+                      "tertiary-fixed": "#ffdfa0",
+                      "surface": "#f8f9fa",
+                      "primary-container": "#1a237e",
+                      "background": "#f8f9fa",
+                      "on-secondary-container": "#006e6e",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#4c56af",
+                      "surface-container-highest": "#e1e3e4",
+                      "secondary": "#006a6a",
+                      "on-error-container": "#93000a",
+                      "secondary-container": "#90efef",
+                      "primary": "#000666",
+                      "on-surface-variant": "#454652",
+                      "inverse-on-surface": "#f0f1f2",
+                      "tertiary-container": "#3f2d00",
+                      "surface-variant": "#e1e3e4",
+                      "surface-container-low": "#f3f4f5",
+                      "inverse-primary": "#bdc2ff",
+                      "surface-dim": "#d9dadb",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#f8f9fa",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#8690ee",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#e0e0ff",
+                      "inverse-surface": "#2e3132",
+                      "on-secondary-fixed-variant": "#004f4f",
+                      "on-tertiary-fixed": "#261a00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "0.5rem",
+                      "max_width": "1280px",
+                      "md": "1rem",
+                      "sm": "0.75rem",
+                      "lg": "1.5rem",
+                      "margin": "2rem",
+                      "base": "4px",
+                      "gutter": "1.5rem",
+                      "xl": "2.5rem"
+              },
+              "fontFamily": {
+                      "h2": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "h1": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "h3": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                      "h3": ["20px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- SideNavBar (Shared Component) -->
+{% include "partials/side_nav.html" with active_nav="course_search" %}
+
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 right-0 left-64 h-16 z-40 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant shadow-sm flex items-center justify-between px-8 transition-all duration-200">
+<div class="flex-1 max-w-md">
+<div class="relative flex items-center w-full h-10 rounded-full focus-within:shadow-[0_0_0_3px_rgba(26,35,126,0.1)] bg-surface-container-low border border-outline-variant/50 focus-within:border-primary transition-all">
+<div class="grid place-items-center h-full w-12 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="peer h-full w-full outline-none text-sm text-on-surface bg-transparent pr-2 font-body-sm text-body-sm" id="search" placeholder="Search courses, professors..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant hover:text-primary transition-colors w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+<div class="h-6 w-px bg-outline-variant mx-xs"></div>
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors">
+                Settings
+            </button>
+</div>
+</header>
+
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-16 p-lg lg:p-xl max-w-max_width mx-auto min-h-screen pb-24">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-body-sm text-body-sm mb-lg">
+<ol class="inline-flex items-center gap-xs">
+<li class="inline-flex items-center hover:text-primary cursor-pointer transition-colors">
+                    Course Search
+                </li>
+<li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+<li class="inline-flex items-center hover:text-primary cursor-pointer transition-colors">
+                    Computer Science
+                </li>
+<li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+<li class="inline-flex items-center hover:text-primary cursor-pointer transition-colors">
+                    COMP3506
+                </li>
+<li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+<li aria-current="page" class="inline-flex items-center text-on-surface font-medium">
+                    Peer Reviews
+                </li>
+</ol>
+</nav>
+
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-lg mb-xl">
+<div class="flex-1">
+<div class="flex items-center gap-sm mb-sm">
+<span class="bg-primary-container text-on-primary-container px-sm py-xs rounded-lg font-label-md text-label-md border border-primary/10">COMP3506</span>
+<span class="bg-surface-container-high text-on-surface-variant px-sm py-xs rounded-lg font-label-md text-label-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+142 Reviews
+</span>
+<span class="bg-surface-container-high text-on-surface-variant px-sm py-xs rounded-lg font-label-md text-label-md">Algorithms &amp; Data Structures</span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface mb-xs">Peer Reviews</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Read student experiences, workload comments, difficulty ratings, and practical tips before planning this course.</p>
+</div>
+<div class="flex flex-col gap-sm min-w-[200px]">
+<a class="bg-primary hover:bg-primary/90 text-on-primary font-label-md text-label-md px-lg py-sm rounded-lg flex items-center justify-center gap-xs transition-colors shadow-sm active:shadow-inner" href="{% url 'add_review' %}">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    Add Your Review
+                </a>
+<a class="bg-transparent border border-primary text-primary hover:bg-primary/5 font-label-md text-label-md px-lg py-sm rounded-lg flex items-center justify-center gap-xs transition-colors" href="{% url 'course_summary' course_code='COMP3506' %}">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                    Back to Summary
+                </a>
+</div>
+</div>
+
+<!-- Notification Banner -->
+<div class="bg-secondary-container/40 border border-secondary text-on-secondary-container rounded-xl p-md flex items-center gap-md mb-xl shadow-sm">
+<div class="bg-secondary rounded-full p-xs flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md font-bold">Student feedback summary</h3>
+<p class="font-body-sm text-body-sm opacity-90 mt-0.5">Students commonly describe this course as concept-heavy, useful for interviews, and easier to manage if assignments are started early.</p>
+</div>
+</div>
+
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<!-- Left Column: Reviews Feed -->
+<div class="lg:col-span-2 flex flex-col gap-lg">
+<!-- Overview Cards -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-lg">
+<h2 class="font-h3 text-h3 text-on-surface mb-md">Review Overview</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="bg-surface-container p-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-center gap-xs text-on-surface-variant mb-sm">
+<span class="material-symbols-outlined text-[20px]">star</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Overall Rating</span>
+</div>
+<div class="flex items-baseline gap-xs">
+<span class="font-h2 text-h2 text-on-surface">4.5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/5</span>
+</div>
+<div class="flex text-tertiary-fixed-dim mt-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-center gap-xs text-on-surface-variant mb-sm">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Difficulty</span>
+</div>
+<div class="flex items-baseline gap-xs">
+<span class="font-h2 text-h2 text-on-surface">4.8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/5</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Higher than department average.</p>
+</div>
+<div class="bg-surface-container p-md rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div class="flex items-center gap-xs text-on-surface-variant mb-sm">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Workload</span>
+</div>
+<div class="flex items-baseline gap-xs">
+<span class="font-h2 text-h2 text-on-surface">15-20</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">hrs/week</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Based on recent student comments.</p>
+</div>
+</div>
+</section>
+
+<!-- Reviews Feed -->
+{% for review in reviews %}
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-lg hover:shadow-md transition-shadow duration-200">
+<div class="flex justify-between items-start mb-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center font-label-md text-label-md text-on-primary-container">{{ review.initials }}</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">{{ review.author }}</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">{{ review.term }} • Grade: {{ review.grade }} • {{ review.submission_date }}</p>
+</div>
+</div>
+<div class="text-right">
+<div class="flex text-tertiary-fixed-dim justify-end mb-xs">
+{% for i in "12345"|make_list %}
+{% if i|add:"0" <= review.overall_rating|add:"0" %}
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+{% else %}
+<span class="material-symbols-outlined text-[18px]">star</span>
+{% endif %}
+{% endfor %}
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">{{ review.overall_rating }}/5</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-sm mb-md">
+<span class="bg-surface-container text-on-surface-variant px-sm py-xs rounded-lg font-label-md text-label-md"><span class="font-bold text-on-surface">Difficulty:</span> {{ review.difficulty }}/5</span>
+<span class="bg-surface-container text-on-surface-variant px-sm py-xs rounded-lg font-label-md text-label-md"><span class="font-bold text-on-surface">Workload:</span> {{ review.workload }}/5</span>
+<span class="bg-surface-container text-on-surface-variant px-sm py-xs rounded-lg font-label-md text-label-md"><span class="font-bold text-on-surface">Lecturer:</span> {{ review.lecturer_quality }}/5</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">{{ review.review_text }}</p>
+<div class="mt-lg flex items-center gap-lg pt-md border-t border-outline-variant/40">
+<button class="helpful-btn flex items-center gap-xs text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" data-review-id="{{ review.id }}">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span><span class="helpful-count">{{ review.helpful_count }}</span> Helpful
+</button>
+</div>
+</section>
+{% empty %}
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-lg text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">No reviews match the selected filters.</p>
+</section>
+{% endfor %}
+
+
+
+<div class="text-center py-lg">
+<button class="bg-transparent border border-primary text-primary hover:bg-primary/5 font-label-md text-label-md px-lg py-sm rounded-lg transition-colors">
+Load More Reviews
+</button>
+</div>
+</div>
+
+<!-- Right Column: Sidebar -->
+<div class="lg:col-span-1 flex flex-col gap-lg">
+<!-- Review Statistics -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-lg">
+<h2 class="font-h3 text-h3 text-on-surface mb-md border-b border-outline-variant pb-sm">Review Statistics</h2>
+<div class="flex flex-col gap-md">
+<div>
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-md text-label-md text-on-surface">Difficulty</span>
+<span class="font-label-md text-label-md text-on-surface-variant">4.8/5.0</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2">
+<div class="bg-error h-2 rounded-full" style="width: 96%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-md text-label-md text-on-surface">Workload</span>
+<span class="font-label-md text-label-md text-on-surface-variant">4.5/5.0</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-xs">
+<span class="font-label-md text-label-md text-on-surface">Lecturer Quality</span>
+<span class="font-label-md text-label-md text-on-surface-variant">4.9/5.0</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 98%"></div>
+</div>
+</div>
+</div>
+<div class="mt-lg pt-md border-t border-outline-variant/40">
+<div class="bg-secondary-container/40 border border-secondary text-on-secondary-container p-md rounded-lg">
+<p class="font-body-sm text-body-sm leading-relaxed">
+<span class="material-symbols-outlined text-[16px] align-middle mr-xs">info</span>
+Based on data from the last 5 academic years. Course difficulty is rated higher than the department average.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Filter & Sort -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-lg">
+<h2 class="font-h3 text-h3 text-on-surface mb-md border-b border-outline-variant pb-sm">Filter &amp; Sort</h2>
+<form method="get" class="flex flex-col gap-md">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-xs">Academic Year</label>
+<select name="academic_year" class="w-full bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface py-sm px-md focus:border-primary focus:ring-primary">
+<option value="All Years" {% if academic_year == 'All Years' %}selected{% endif %}>All Years</option>
+<option value="2023-2024" {% if academic_year == '2023-2024' %}selected{% endif %}>2023-2024</option>
+<option value="2022-2023" {% if academic_year == '2022-2023' %}selected{% endif %}>2022-2023</option>
+<option value="2021-2022" {% if academic_year == '2021-2022' %}selected{% endif %}>2021-2022</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-xs">Grade Received</label>
+<div class="grid grid-cols-3 gap-sm">
+<button type="button" data-grade="7" class="grade-btn py-xs px-sm border {% if grade_filter == '7' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">7</button>
+<button type="button" data-grade="6" class="grade-btn py-xs px-sm border {% if grade_filter == '6' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">6</button>
+<button type="button" data-grade="5" class="grade-btn py-xs px-sm border {% if grade_filter == '5' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">5</button>
+<button type="button" data-grade="4" class="grade-btn py-xs px-sm border {% if grade_filter == '4' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">4</button>
+<button type="button" data-grade="3" class="grade-btn py-xs px-sm border {% if grade_filter == '3' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">3</button>
+<button type="button" data-grade="3S4" class="grade-btn py-xs px-sm border {% if grade_filter == '3S4' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">3S4</button>
+<button type="button" data-grade="3S3" class="grade-btn py-xs px-sm border {% if grade_filter == '3S3' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">3S3</button>
+<button type="button" data-grade="3S-, NS-" class="grade-btn py-xs px-sm border {% if grade_filter == '3S-, NS-' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">3S-, NS-</button>
+<button type="button" data-grade="1, 2" class="grade-btn py-xs px-sm border {% if grade_filter == '1, 2' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">1, 2</button>
+</div>
+<input type="hidden" id="grade_filter_input" name="grade_filter" value="{{ grade_filter }}">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-xs">Difficulty</label>
+<div class="grid grid-cols-5 gap-sm">
+<button type="button" data-difficulty="1" class="difficulty-btn py-xs px-sm border {% if difficulty_filter == '1' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">1</button>
+<button type="button" data-difficulty="2" class="difficulty-btn py-xs px-sm border {% if difficulty_filter == '2' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">2</button>
+<button type="button" data-difficulty="3" class="difficulty-btn py-xs px-sm border {% if difficulty_filter == '3' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">3</button>
+<button type="button" data-difficulty="4" class="difficulty-btn py-xs px-sm border {% if difficulty_filter == '4' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">4</button>
+<button type="button" data-difficulty="5" class="difficulty-btn py-xs px-sm border {% if difficulty_filter == '5' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">5</button>
+</div>
+<input type="hidden" id="difficulty_filter_input" name="difficulty_filter" value="{{ difficulty_filter }}">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-xs">Workload</label>
+<div class="grid grid-cols-5 gap-sm">
+<button type="button" data-workload="1" class="workload-btn py-xs px-sm border {% if workload_filter == '1' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">1</button>
+<button type="button" data-workload="2" class="workload-btn py-xs px-sm border {% if workload_filter == '2' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">2</button>
+<button type="button" data-workload="3" class="workload-btn py-xs px-sm border {% if workload_filter == '3' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">3</button>
+<button type="button" data-workload="4" class="workload-btn py-xs px-sm border {% if workload_filter == '4' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">4</button>
+<button type="button" data-workload="5" class="workload-btn py-xs px-sm border {% if workload_filter == '5' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">5</button>
+</div>
+<input type="hidden" id="workload_filter_input" name="workload_filter" value="{{ workload_filter }}">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-xs">Lecturer Quality</label>
+<div class="grid grid-cols-5 gap-sm">
+<button type="button" data-lecturer="1" class="lecturer-btn py-xs px-sm border {% if lecturer_filter == '1' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">1</button>
+<button type="button" data-lecturer="2" class="lecturer-btn py-xs px-sm border {% if lecturer_filter == '2' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">2</button>
+<button type="button" data-lecturer="3" class="lecturer-btn py-xs px-sm border {% if lecturer_filter == '3' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">3</button>
+<button type="button" data-lecturer="4" class="lecturer-btn py-xs px-sm border {% if lecturer_filter == '4' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">4</button>
+<button type="button" data-lecturer="5" class="lecturer-btn py-xs px-sm border {% if lecturer_filter == '5' %}bg-primary text-on-primary border-primary{% else %}border-outline-variant text-on-surface-variant hover:bg-surface-container{% endif %} rounded-lg font-label-md text-label-md transition-colors">5</button>
+</div>
+<input type="hidden" id="lecturer_filter_input" name="lecturer_filter" value="{{ lecturer_filter }}">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-xs">Sort By</label>
+<select name="sort_by" class="w-full bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface py-sm px-md focus:border-primary focus:ring-primary">
+<option value="Most Recent" {% if sort_by == 'Most Recent' %}selected{% endif %}>Most Recent</option>
+<option value="Highest Rating" {% if sort_by == 'Highest Rating' %}selected{% endif %}>Highest Rating</option>
+<option value="Lowest Rating" {% if sort_by == 'Lowest Rating' %}selected{% endif %}>Lowest Rating</option>
+<option value="Most Helpful" {% if sort_by == 'Most Helpful' %}selected{% endif %}>Most Helpful</option>
+</select>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-sm">
+<button type="submit" id="apply-filters-btn" class="w-full bg-primary hover:bg-primary/90 text-on-primary font-label-md text-label-md px-lg py-sm rounded-lg flex items-center justify-center gap-xs transition-colors shadow-sm active:shadow-inner">
+<span class="material-symbols-outlined text-[18px]">filter_alt</span>
+Apply Filters
+</button>
+<a href="{% url 'peer_review' %}" class="w-full bg-transparent border border-outline text-on-surface-variant hover:bg-surface-container font-label-md text-label-md px-lg py-sm rounded-lg flex items-center justify-center gap-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">filter_alt_off</span>
+Clear Filters
+</a>
+</div>
+</form>
+
+<script>
+function makeToggleable(btnClass, inputId, dataAttr) {
+  document.querySelectorAll('.' + btnClass).forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const isSelected = this.classList.contains('bg-primary');
+      
+      if (isSelected) {
+        this.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+        this.classList.add('border-outline-variant', 'text-on-surface-variant', 'hover:bg-surface-container');
+        document.getElementById(inputId).value = '';
+      } else {
+        document.querySelectorAll('.' + btnClass).forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+          b.classList.add('border-outline-variant', 'text-on-surface-variant', 'hover:bg-surface-container');
+        });
+        this.classList.remove('border-outline-variant', 'text-on-surface-variant', 'hover:bg-surface-container');
+        this.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+        document.getElementById(inputId).value = this.dataset[dataAttr];
+      }
+    });
+  });
+}
+
+makeToggleable('grade-btn', 'grade_filter_input', 'grade');
+makeToggleable('difficulty-btn', 'difficulty_filter_input', 'difficulty');
+makeToggleable('workload-btn', 'workload_filter_input', 'workload');
+makeToggleable('lecturer-btn', 'lecturer_filter_input', 'lecturer');
+
+document.querySelectorAll('.helpful-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const countEl = this.querySelector('.helpful-count');
+    const currentCount = Number.parseInt(countEl.textContent, 10) || 0;
+    countEl.textContent = currentCount + 1;
+  });
+});
+</script>
+</section>
+
+<!-- Quick Links/Resources -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-lg">
+<h2 class="font-h3 text-h3 text-on-surface mb-md border-b border-outline-variant pb-sm">Resources</h2>
+<ul class="flex flex-col gap-sm">
+<li>
+<a class="flex items-center gap-sm text-on-surface hover:text-primary transition-colors font-body-sm text-body-sm py-xs" href="{% url 'course_summary' course_code='COMP3506' %}">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">description</span>
+Course Summary
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm text-on-surface hover:text-primary transition-colors font-body-sm text-body-sm py-xs" href="{% url 'add_review' %}">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">rate_review</span>
+Write a Review
+</a>
+</li>
+<li>
+<a class="flex items-center gap-sm text-on-surface hover:text-primary transition-colors font-body-sm text-body-sm py-xs" href="#">
+<span class="material-symbols-outlined text-outline-variant text-[20px]">menu_book</span>
+Past Exams Archive
+</a>
+</li>
+</ul>
+</section>
+</div>
+</div>
+</main>
+</body>
+</html>
