@@ -1,0 +1,53 @@
+<nav class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-outline-variant shadow-sm flex flex-col py-6 z-50">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shrink-0" data-alt="University Crest: A minimalist geometric shield logo in deep indigo and white">
+<span class="material-symbols-outlined icon-fill">school</span>
+</div>
+<div>
+<h1 class="text-xl font-bold text-indigo-900 dark:text-white leading-tight">EduPortal</h1>
+<p class="text-sm font-medium text-gray-500">Academic Advisor</p>
+</div>
+</div>
+<div class="px-4 mb-4">
+<p class="text-xs font-medium text-on-surface-variant uppercase tracking-wider pl-3">Academic Advisor</p>
+</div>
+<ul class="flex flex-col gap-1 px-2 w-full">
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg {% if active_nav == 'dashboard' %}text-indigo-700 dark:text-indigo-400 font-semibold border-r-4 border-indigo-700 dark:border-indigo-400 bg-indigo-50 dark:bg-indigo-900/20{% else %}text-on-surface-variant hover:bg-surface-container-low hover:text-primary{% endif %} transition-colors duration-150 active:scale-95" href="{% url 'dashboard' %}">
+<span class="material-symbols-outlined" {% if active_nav == 'dashboard' %}style="font-variation-settings: 'FILL' 1;"{% endif %}>home</span>
+<span class="text-sm font-medium">Home</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg {% if active_nav == 'course_search' %}text-indigo-700 dark:text-indigo-400 font-semibold border-r-4 border-indigo-700 dark:border-indigo-400 bg-indigo-50 dark:bg-indigo-900/20{% else %}text-on-surface-variant hover:bg-surface-container-low hover:text-primary{% endif %} transition-colors duration-150 active:scale-95" href="{% url 'course_search' %}">
+<span class="material-symbols-outlined" {% if active_nav == 'course_search' %}style="font-variation-settings: 'FILL' 1;"{% endif %}>search</span>
+<span class="text-sm font-medium">Course Search</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg {% if active_nav == 'course_compare' %}text-indigo-700 dark:text-indigo-400 font-semibold border-r-4 border-indigo-700 dark:border-indigo-400 bg-indigo-50 dark:bg-indigo-900/20{% else %}text-on-surface-variant hover:bg-surface-container-low hover:text-primary{% endif %} transition-colors duration-150 active:scale-95" href="{% url 'course_compare' %}">
+<span class="material-symbols-outlined" {% if active_nav == 'course_compare' %}style="font-variation-settings: 'FILL' 1;"{% endif %}>compare_arrows</span>
+<span class="text-sm font-medium">Comparison</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg {% if active_nav == 'course_planner' %}text-indigo-700 dark:text-indigo-400 font-semibold border-r-4 border-indigo-700 dark:border-indigo-400 bg-indigo-50 dark:bg-indigo-900/20{% else %}text-on-surface-variant hover:bg-surface-container-low hover:text-primary{% endif %} transition-colors duration-150 active:scale-95" href="{% url 'course_planner' %}">
+<span class="material-symbols-outlined" {% if active_nav == 'course_planner' %}style="font-variation-settings: 'FILL' 1;"{% endif %}>calendar_month</span>
+<span class="text-sm font-medium">Semester Planner</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-colors duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">assignment_turned_in</span>
+<span class="text-sm font-medium">Degree Audit</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto px-6 flex items-center gap-3 pt-6 border-t border-outline-variant/30">
+<img alt="Student Profile Photo" class="w-8 h-8 rounded-full object-cover" data-alt="close up portrait of young professional student in bright library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Lyht4dPHYwnzt7guOnjAqDkZTiObOw5Xh2_g1DrjVAXYYIWz4bzliriCFsSeRNCrF8fp94nAmUl9GAlmtVTIuwSSPok9vzEM7wyRlHXHn4GLTMkGdKcpOCUZNfDaJSFcRguGmkQnUFVahSsdbaLqEzs6XufzmjK4fiIyXFfv3pi0jTMzNO8JTeMI0cvPezpvvyTcFZyRnPLHuZcSaKfoa7_sVqEz_zdbOrXrAE0uD0YOjG4mNZz9BuD3KEqTKOVtNaJpOSkqeaY"/>
+<div class="flex flex-col">
+<span class="text-xs font-medium text-on-surface">Alex Johnson</span>
+<span class="text-[11px] text-on-surface-variant">B. Computer Science</span>
+</div>
+</div>
+</nav>
