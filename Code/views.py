@@ -150,12 +150,12 @@ def peer_review(request):
 def add_review(request):
     if request.method == "POST":
         review_text = request.POST.get("review_text", "").strip()
-        if len(review_text) < 50:
+        if len(review_text) < 20:
             return render(
                 request,
                 "add_review.html",
                 {
-                    "form_error": "Review must be at least 50 characters.",
+                    "form_error": "Review must be at least 20 characters.",
                 },
             )
 
