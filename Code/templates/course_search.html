@@ -126,10 +126,10 @@ body { margin: 0; overflow: hidden; font-family: Inter, sans-serif; }
           <div class="max-w-3xl mb-6">
             <h1 class="text-3xl font-bold text-on-surface">Discover Courses</h1>
             <p id="result-summary" class="mt-1 text-base text-on-surface-variant">Showing 124 results based on your preferences</p>
-            <form class="mt-5 flex w-full overflow-hidden rounded-lg border border-outline-variant bg-white shadow-sm">
+            <form id="course-search-form" class="mt-5 flex w-full overflow-hidden rounded-lg border border-outline-variant bg-white shadow-sm">
               <div class="relative flex-1">
                 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-[20px]">search</span>
-                <input class="h-12 w-full border-0 pl-12 pr-4 text-sm focus:ring-0" placeholder="Search by course code, name, or keywords..." type="search"/>
+                <input id="course-search-input" class="h-12 w-full border-0 pl-12 pr-4 text-sm focus:ring-0" placeholder="Search by course code, name, or keywords..." type="search"/>
               </div>
               <button class="w-28 bg-primary text-white text-sm font-semibold hover:bg-indigo-900 transition-colors" type="submit">Search</button>
             </form>
@@ -209,6 +209,8 @@ const courseCards = document.querySelectorAll(".course-card");
 const difficultyCounts = document.querySelectorAll(".difficulty-count");
 const resultSummary = document.getElementById("result-summary");
 const clearFiltersButton = document.getElementById("clear-filters");
+const courseSearchForm = document.getElementById("course-search-form");
+const courseSearchInput = document.getElementById("course-search-input");
 const pillActiveClasses = ["bg-primary", "text-white"];
 const pillInactiveClasses = ["bg-surface-container-low", "text-on-surface-variant"];
 
@@ -242,6 +244,10 @@ function getSelectedValues(selector, dataKey) {
     .map((filter) => filter.dataset[dataKey]);
 }
 
+function normalizeSearchTerm(value) {
+  return value.trim().toLowerCase();
+}
+
 function updatePillStyles() {
   pillFilters.forEach((filter) => {
     const isActive = filter.dataset.active === "true";
@@ -262,6 +268,7 @@ function applyFilters() {
     .map((filter) => filter.dataset.assessment);
   const selectedWorkloads = getSelectedValues(".pill-filter[data-filter-group='workload']", "filterValue");
   const selectedRelevance = getSelectedValues(".pill-filter[data-filter-group='relevance']", "filterValue");
+  const searchTerm = normalizeSearchTerm(courseSearchInput.value);
   let visibleCount = 0;
 
   courseCards.forEach((card) => {
@@ -270,15 +277,17 @@ function applyFilters() {
     const matchesAssessment = selectedAssessments.length === 0 || selectedAssessments.includes(card.dataset.assessment);
     const matchesWorkload = selectedWorkloads.length === 0 || selectedWorkloads.includes(card.dataset.workload);
     const matchesRelevance = selectedRelevance.length === 0 || selectedRelevance.includes(card.dataset.relevance);
-    const shouldShow = matchesDifficulty && matchesAssessment && matchesWorkload && matchesRelevance;
+    const matchesSearch = searchTerm === "" || card.textContent.toLowerCase().includes(searchTerm);
+    const shouldShow = matchesDifficulty && matchesAssessment && matchesWorkload && matchesRelevance && matchesSearch;
     card.classList.toggle("hidden", !shouldShow);
     if (shouldShow) visibleCount += 1;
   });
 
   const hasActiveFilters = selectedDifficulties.length > 0 || selectedAssessments.length > 0 || selectedWorkloads.length > 0 || selectedRelevance.length > 0;
-  resultSummary.textContent = !hasActiveFilters
+  const hasSearchTerm = searchTerm !== "";
+  resultSummary.textContent = !hasActiveFilters && !hasSearchTerm
     ? "Showing 124 results based on your preferences"
-    : `Showing ${visibleCount} result${visibleCount === 1 ? "" : "s"} based on selected filters`;
+    : `Showing ${visibleCount} result${visibleCount === 1 ? "" : "s"}${hasSearchTerm ? ` for "${courseSearchInput.value.trim()}"` : ""}${hasActiveFilters ? " based on selected filters" : ""}`;
 }
 
 difficultyFilters.forEach((filter) => {
@@ -297,6 +306,13 @@ pillFilters.forEach((filter) => {
   });
 });
 
+courseSearchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  applyFilters();
+});
+
+courseSearchInput.addEventListener("input", applyFilters);
+
 clearFiltersButton.addEventListener("click", () => {
   difficultyFilters.forEach((filter) => {
     filter.checked = false;
@@ -307,6 +323,7 @@ clearFiltersButton.addEventListener("click", () => {
   pillFilters.forEach((filter) => {
     filter.dataset.active = "false";
   });
+  courseSearchInput.value = "";
   updatePillStyles();
   applyFilters();
 });
