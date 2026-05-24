@@ -137,32 +137,9 @@
 <!-- SideNavBar (Shared Component) -->
 {% include "partials/side_nav.html" with active_nav="course_compare" %}
 <!-- TopNavBar (Shared Component) -->
-<header class="fixed top-0 right-0 left-64 h-16 z-40 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant shadow-sm flex items-center justify-between px-8 transition-all duration-200">
-<!-- Search Bar (on_left) -->
-<div class="flex-1 max-w-md">
-<div class="relative flex items-center w-full h-10 rounded-full focus-within:shadow-[0_0_0_3px_rgba(26,35,126,0.1)] bg-surface-container-low border border-outline-variant/50 focus-within:border-primary transition-all">
-<div class="grid place-items-center h-full w-12 text-on-surface-variant">
-<span class="material-symbols-outlined text-[20px]">search</span>
-</div>
-<input class="peer h-full w-full outline-none text-sm text-on-surface bg-transparent pr-2 font-body-sm text-body-sm" id="search" placeholder="Search courses, professors..." type="text"/>
-</div>
-</div>
-<!-- Trailing Actions -->
-<div class="flex items-center gap-md">
-<button class="text-on-surface-variant hover:text-primary transition-colors w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<button class="text-on-surface-variant hover:text-primary transition-colors w-10 h-10 rounded-full hover:bg-surface-container flex items-center justify-center">
-<span class="material-symbols-outlined">help_outline</span>
-</button>
-<div class="h-6 w-px bg-outline-variant mx-xs"></div>
-<button class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors">
-                Settings
-            </button>
-</div>
-</header>
+{% include "partials/top_nav.html" %}
 <!--Main Content Canvas-->
- <div class="flex-1 overflow-y-auto mt-16 p-md md:p-lg lg:p-xl canvas-scroll bg-surface">
+ <div class="ml-64 flex-1 overflow-y-auto mt-16 p-md md:p-lg lg:p-xl canvas-scroll bg-surface">
         <div class="max-w-[1400px] mx-auto w-full">
                 
                 <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-lg">
